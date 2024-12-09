@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fo {
+  font-family: "Fontdiner Swanky", serif;
+}
+.ma {
+  font-family: "Markazi Text", serif;
+}
+/* * {
+  background-color: #202326;
+} */
+/* Custom class for gradient border */
+/* Custom class for gradient border */
+.gradient-border {
+  border-image: linear-gradient(to right, #e9d5ff, #1e3a8a) 1;
+}
+/* light-theme.css */
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --primary-color: purple;
+}
+
+/* dark-theme.css */
+:root {
+  --bg-color: #1a202c;
+  --text-color: white;
+  --primary-color: purple;
+}
