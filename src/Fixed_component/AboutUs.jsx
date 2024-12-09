@@ -1,25 +1,67 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useThemeSwitcher } from "react-css-theme-switcher";
 import logo_1 from "/s-1.png";
 import logo_2 from "/s-2.png";
+
 export default function AboutUs() {
+  const { currentTheme, switcher } = useThemeSwitcher();
+
+  // Detect the current theme and apply corresponding styles
+  useEffect(() => {
+    console.log("Current theme:", currentTheme);
+  }, [currentTheme]);
+
+  const isDarkTheme = currentTheme === "dark"; // You can check the theme to conditionally apply styles
+
   return (
     <section>
       <div className="container mx-auto mt-[100px]">
         <div className="grid grid-cols-5 w-full h-[100px]">
-          <div className="col-span-2 bg-[#23262a] border-t border-l rounded-tl-[42px] rounded-tr-[42px]"></div>
-          <div className="bg-transparent col-span-3 border-b rounded-bl-[42px]  "></div>
+          <div
+            className={`col-span-2 ${
+              isDarkTheme ? "bg-[#23262a]" : "bg-[#f9fafb]"
+            } border-t border-l ${
+              isDarkTheme ? "border-purple-800" : "border-purple-800"
+            } rounded-tl-[42px] rounded-tr-[42px]`}
+          ></div>
+          <div
+            className={`bg-transparent col-span-3 border-b ${
+              isDarkTheme ? "border-purple-800" : "border-purple-800"
+            } rounded-bl-[42px]`}
+          ></div>
         </div>
-        <div className=" bg-[#23262a] w-full border-l h-[500px]  border-b rounded-bl-[42px] grid grid-cols-2  ">
+        <div
+          className={`${
+            isDarkTheme ? "bg-[#23262a]" : "bg-[#f9fafb]"
+          } w-full border-l ${
+            isDarkTheme ? "border-purple-800" : "border-purple-800"
+          } h-[800px] lg:h-[500px] border-b rounded-bl-[42px] grid grid-cols-1 md:grid-cols-2 gap-12`}
+        >
           <div className="flex flex-col justify-start items-start px-12">
-            <h1 className="font-light text-4xl pop text-white">
-              WHO <span className="text-white font-bold pop">WE ARE</span>
+            <h1
+              className={`font-light text-4xl pop ${
+                isDarkTheme ? "text-white" : "text-black"
+              } sm:text-3xl`}
+            >
+              WHO{" "}
+              <span
+                className={`${
+                  isDarkTheme ? "text-white" : "text-black"
+                } font-bold pop`}
+              >
+                WE ARE
+              </span>
             </h1>
-            <div className="flex flex-col mt-12 r text-white gap-8">
+            <div
+              className={`flex flex-col mt-12 r ${
+                isDarkTheme ? "text-white" : "text-black"
+              } gap-8`}
+            >
               <p>
                 Lember is a software development company that specializes in
                 creating and integrating detailed technology solutions. Our main
                 goal is making businesses more advanced, structured, and
-                profitable.{" "}
+                profitable.
               </p>
               <p>
                 We are lucky to have a team of truly talented and passionate
@@ -41,36 +83,50 @@ export default function AboutUs() {
             </div>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <div className="bg-[#1e2022] w-[80%] h-[80%]">
-              <div className=" mt-[-25px] flex flex-row gap-6 justify-center items-center">
-                <div className="flex flex-col text-white font-bold justify-center items-center">
+            <div
+              className={`${
+                isDarkTheme ? "bg-[#1e2022]" : "bg-[#e1e3e5]"
+              } w-full h-full lg:w-[80%] lg:h-[80%]`}
+            >
+              <div className="mt-[-25px] flex flex-row gap-6 justify-center items-center flex-wrap">
+                <div
+                  className={`flex flex-col ${
+                    isDarkTheme ? "text-white" : "text-black"
+                  } font-bold justify-center items-center`}
+                >
                   <img
                     className="w-[80px] h-[80px] rounded-[42px]"
                     src={logo_1}
                     alt=""
                   />
-                  <p
-                    className="text-center mt-2
-                  "
-                  >
-                    Sifat<br></br>CEO,Co-Founder
+                  <p className="text-center mt-2">
+                    Sifat
+                    <br />
+                    CEO,Co-Founder
                   </p>
                 </div>
-                <div className="flex text-white font-bold flex-col justify-center items-center">
+                <div
+                  className={`flex ${
+                    isDarkTheme ? "text-white" : "text-black"
+                  } font-bold flex-col justify-center items-center`}
+                >
                   <img
                     className="w-[80px] h-[80px] rounded-[42px]"
                     src={logo_2}
                     alt=""
                   />
                   <p className="text-center mt-2">
-                    Sajid<br></br>CEO,Co-Founder
+                    Sajid
+                    <br />
+                    CEO,Co-Founder
                   </p>
                 </div>
               </div>
-              <div>
+              <div className="">
                 <p
-                  className="text-gray-400 text-[15px] co px-8 mt-3
-                "
+                  className={`text-gray-400 text-[15px] co px-8 mt-3 ${
+                    isDarkTheme ? "text-white" : "text-black"
+                  }`}
                 >
                   We are IT professionals who, eight years ago, decided to start
                   a software development company. We both have master’s degrees
