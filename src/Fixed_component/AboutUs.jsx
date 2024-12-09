@@ -14,7 +14,7 @@ export default function AboutUs() {
   const isDarkTheme = currentTheme === "dark"; // You can check the theme to conditionally apply styles
 
   return (
-    <section>
+    <section id="about">
       <div className="container mx-auto mt-[100px]">
         <div className="grid grid-cols-5 w-full h-[100px]">
           <div

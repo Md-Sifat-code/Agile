@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
 import { FaArrowUp, FaSun, FaMoon } from "react-icons/fa"; // Import the up arrow and sun/moon icons
 import { useThemeSwitcher } from "react-css-theme-switcher"; // Import the theme switcher hook
 
 export default function Navbar() {
-  const location = useLocation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { switcher, currentTheme } = useThemeSwitcher(); // Get theme switcher and current theme
 
@@ -15,6 +13,13 @@ export default function Navbar() {
 
   const handleThemeToggle = () => {
     switcher({ theme: currentTheme === "light" ? "dark" : "light" }); // Toggle theme
+  };
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -31,79 +36,47 @@ export default function Navbar() {
           </h1>
         </div>
         <div className="mt-8 flex flex-col  lg:flex-row justify-center items-center gap-6 lg:gap-12 font-bold">
-          <NavLink
-            to="/"
+          <button
+            onClick={() => scrollToSection("home")}
             className={`${
-              location.pathname === "/"
-                ? "text-purple-600"
-                : currentTheme === "light"
-                ? "text-black"
-                : "text-white"
+              currentTheme === "light" ? "text-black" : "text-white"
             } relative border-b-2 py-6 border-transparent hover:border-purple-800 transition-all`}
           >
             Home
-          </NavLink>
-          <NavLink
-            to="/about"
+          </button>
+          <button
+            onClick={() => scrollToSection("about")}
             className={`${
-              location.pathname === "/about"
-                ? "text-purple-600"
-                : currentTheme === "light"
-                ? "text-black"
-                : "text-white"
+              currentTheme === "light" ? "text-black" : "text-white"
             } relative border-b-2 py-6 border-transparent hover:border-purple-800 transition-all`}
           >
             About Us
-          </NavLink>
-
-          <NavLink
-            to="/Projects"
+          </button>
+          <button
+            onClick={() => scrollToSection("projects")}
             className={`${
-              location.pathname === "/cases"
-                ? "text-purple-600"
-                : currentTheme === "light"
-                ? "text-black"
-                : "text-white"
+              currentTheme === "light" ? "text-black" : "text-white"
             } relative border-b-2 py-6 border-transparent hover:border-purple-800 transition-all`}
           >
             Projects
-          </NavLink>
-          <NavLink
-            to="/testimonials"
+          </button>
+          <button
+            onClick={() => scrollToSection("testimonials")}
             className={`${
-              location.pathname === "/testimonials"
-                ? "text-purple-600"
-                : currentTheme === "light"
-                ? "text-black"
-                : "text-white"
+              currentTheme === "light" ? "text-black" : "text-white"
             } relative border-b-2 py-6 border-transparent hover:border-purple-800 transition-all`}
           >
             Testimonials
-          </NavLink>
-          <NavLink
-            to="/blog"
+          </button>
+
+          <button
+            onClick={() => scrollToSection("contact")}
             className={`${
-              location.pathname === "/blog"
-                ? "text-purple-600"
-                : currentTheme === "light"
-                ? "text-black"
-                : "text-white"
-            } relative border-b-2 py-6 border-transparent hover:border-purple-800 transition-all`}
-          >
-            Blog
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={`${
-              location.pathname === "/contact"
-                ? "text-purple-600"
-                : currentTheme === "light"
-                ? "text-black"
-                : "text-white"
+              currentTheme === "light" ? "text-black" : "text-white"
             } relative border-b-2 py-6 border-transparent hover:border-purple-800 transition-all`}
           >
             Contact
-          </NavLink>
+          </button>
         </div>
         <div className="flex items-center gap-4">
           <button
