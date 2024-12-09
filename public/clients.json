@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "name": "Alice Johnson",
+    "feedback": "The team was professional and delivered beyond my expectations."
+  },
+  {
+    "id": "2",
+    "name": "Michael Smith",
+    "feedback": "Great communication and excellent results. Highly recommended!"
+  },
+  {
+    "id": "3",
+    "name": "Sophia Brown",
+    "feedback": "I appreciated the timely updates and the high-quality service provided."
+  },
+  {
+    "id": "4",
+    "name": "James Williams",
+    "feedback": "Amazing attention to detail and creative solutions for our needs."
+  },
+  {
+    "id": "5",
+    "name": "Emily Davis",
+    "feedback": "The project was completed on time and exceeded my expectations."
+  },
+  {
+    "id": "6",
+    "name": "Daniel Martinez",
+    "feedback": "The team was knowledgeable, responsive, and a pleasure to work with."
+  },
+  {
+    "id": "7",
+    "name": "Olivia Garcia",
+    "feedback": "Exceptional service and support throughout the entire process."
+  },
+  {
+    "id": "8",
+    "name": "William Lee",
+    "feedback": "Their innovative approach and expertise made a significant impact."
+  },
+  {
+    "id": "9",
+    "name": "Isabella Anderson",
+    "feedback": "I am extremely satisfied with the results and the overall experience."
+  },
+  {
+    "id": "10",
+    "name": "Ethan Thomas",
+    "feedback": "They went above and beyond to deliver a fantastic product."
+  }
+]

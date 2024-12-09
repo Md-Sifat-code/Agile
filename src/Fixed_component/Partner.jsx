@@ -1,20 +1,46 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { SiJirasoftware } from "react-icons/si";
 import { AiOutlineTeam } from "react-icons/ai";
 import { FaBrain } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import the AOS styles
+
 export default function Partner() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Duration of the animation
+      easing: "ease-in-out", // Easing function for smooth animation
+      once: true, // Animation will trigger only once when the element is in view
+    });
+
+    // Prevent scrollbar during animation
+    document.body.style.overflow = "hidden";
+
+    // Re-enable scrollbar after animation is complete
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
   return (
     <section>
       <div className="container mx-auto px-4">
-        <h1 className="pop text-white text-5xl font-light text-center mb-12">
+        <h1
+          className="pop text-white text-5xl font-light text-center mb-12"
+          data-aos="zoom-in"
+        >
           PARTNER{" "}
           <span className="text-white ma font-bold text-7xl">WITH US</span>
         </h1>
         <div className="flex flex-wrap lg:flex-row md:flex-col gap-12 justify-center items-stretch">
           {/* Card 1 */}
-          <div className="border bg-[#23262a] flex flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8">
+          <div
+            className="border bg-[#23262a] flex flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
             <div className="flex flex-row gap-5 items-center">
               <SiJirasoftware className="text-5xl font-bold text-purple-800" />
               <h1 className="pop text-white font-bold text-xl">
@@ -40,7 +66,11 @@ export default function Partner() {
             </div>
           </div>
           {/* Card 2 */}
-          <div className="border bg-[#23262a] flex flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8">
+          <div
+            className="border bg-[#23262a] flex flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
             <div className="flex flex-row gap-5 items-center">
               <AiOutlineTeam className="text-5xl font-bold text-purple-800" />
               <h1 className="pop text-white font-bold text-xl">
@@ -63,7 +93,11 @@ export default function Partner() {
             </div>
           </div>
           {/* Card 3 */}
-          <div className="border bg-[#23262a] flex flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8">
+          <div
+            className="border bg-[#23262a] flex flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
             <div className="flex flex-row gap-5 items-center">
               <FaBrain className="text-5xl font-bold text-purple-800" />
               <h1 className="pop text-white font-bold text-xl">

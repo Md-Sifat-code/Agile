@@ -27,7 +27,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     {/* Wrap your app with the ThemeSwitcherProvider */}
-    <ThemeSwitcherProvider themeMap={themeFiles} defaultTheme="light">
+    <ThemeSwitcherProvider themeMap={themeFiles} defaultTheme="dark">
       <RouterProvider router={router} />
     </ThemeSwitcherProvider>
   </React.StrictMode>

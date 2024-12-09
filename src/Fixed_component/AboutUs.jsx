@@ -21,12 +21,12 @@ export default function AboutUs() {
             className={`col-span-2 ${
               isDarkTheme ? "bg-[#23262a]" : "bg-[#f9fafb]"
             } border-t border-l ${
-              isDarkTheme ? "border-purple-800" : "border-purple-800"
+              isDarkTheme ? "border-white" : "border-purple-800"
             } rounded-tl-[42px] rounded-tr-[42px]`}
           ></div>
           <div
             className={`bg-transparent col-span-3 border-b ${
-              isDarkTheme ? "border-purple-800" : "border-purple-800"
+              isDarkTheme ? "border-white" : "border-purple-800"
             } rounded-bl-[42px]`}
           ></div>
         </div>
@@ -34,8 +34,8 @@ export default function AboutUs() {
           className={`${
             isDarkTheme ? "bg-[#23262a]" : "bg-[#f9fafb]"
           } w-full border-l ${
-            isDarkTheme ? "border-purple-800" : "border-purple-800"
-          } h-[800px] lg:h-[500px] border-b rounded-bl-[42px] grid grid-cols-1 md:grid-cols-2 gap-12`}
+            isDarkTheme ? "border-white" : "border-purple-800"
+          } h-[1800px] sm:h-[800px] lg:h-[500px] border-b rounded-bl-[42px] grid grid-cols-1 md:grid-cols-2 gap-12`}
         >
           <div className="flex flex-col justify-start items-start px-12">
             <h1
