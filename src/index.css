@@ -29,3 +29,7 @@
   --text-color: white;
   --primary-color: purple;
 }
+
+.co {
+  font-family: "Courier Prime", monospace;
+}

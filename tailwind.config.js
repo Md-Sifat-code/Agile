@@ -5,9 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'spin-slow': 'spin 10s linear infinite', // Adds a slower spin animation
+      },
+    },
   },
   plugins: [
     require('daisyui'),
   ],
-}
+};

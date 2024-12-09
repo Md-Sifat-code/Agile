@@ -108,9 +108,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <button
             className={`btn mt-8 px-8 ${
-              currentTheme === "light"
-                ? "text-white bg-purple-800 border-none rounded-none"
-                : "text-white"
+              currentTheme === "light" ? "text-black  border" : "text-white"
             } border-2 border-transparent bg-transparent gradient-border hover:bg-gradient-to-b from-purple-400 to-purple-900 hover:border-black hover:rounded-none`}
           >
             Book a Call
@@ -120,10 +118,10 @@ export default function Navbar() {
           {/* Theme Switcher Button */}
           <button
             onClick={handleThemeToggle}
-            className="mt-8 p-2 text-white border-2 border-transparent bg-transparent hover:bg-gray-700 rounded-full"
+            className="mt-8 p-2 text-white border-2 border-transparent bg-black hover:bg-gray-700 rounded-full"
           >
             {currentTheme === "light" ? (
-              <FaMoon className="text-yellow-400" />
+              <FaMoon className="text-yellow-400 " />
             ) : (
               <FaSun className="text-yellow-400" />
             )}
