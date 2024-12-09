@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <section>
-      <div className="container mx-auto flex flex-row justify-around">
+      <div className="container mx-auto flex flex-col lg:flex-row justify-center items-center lg:justify-around">
         {/* logo */}
         <div
           className={`text-5xl ${
@@ -30,7 +30,7 @@ export default function Navbar() {
             A<span className="fo text-purple-800">g</span>ile
           </h1>
         </div>
-        <div className="mt-8 flex flex-row justify-center items-center gap-12 font-bold">
+        <div className="mt-8 flex flex-col  lg:flex-row justify-center items-center gap-6 lg:gap-12 font-bold">
           <NavLink
             to="/"
             className={`${

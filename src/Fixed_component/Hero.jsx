@@ -9,17 +9,21 @@ export default function Hero() {
   const { currentTheme } = useThemeSwitcher(); // Get the current theme
 
   return (
-    <section>
-      <div className="container mx-auto h-[800px] grid grid-cols-2 overflow-hidden">
+    <section className="py-10">
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center">
         {/* Left Section */}
-        <div className="w-full h-full flex flex-col justify-start items-center">
+        <div className="flex flex-col justify-center items-center text-center lg:text-left px-4 lg:px-0 pop">
           <h1
             className={`${
               currentTheme === "light" ? "text-black" : "text-white"
-            } font-bold text-5xl mt-44`}
+            } font-bold text-4xl lg:text-5xl mt-8 lg:mt-0`}
           >
             Your Trustworthy{" "}
-            <img className="inline-block w-[50px] h-[50px]" src={face} alt="" />
+            <img
+              className="inline-block w-[50px] h-[50px]"
+              src={face}
+              alt="Smiley Face"
+            />
             <br />
             <span className="font-semibold">Technology</span>
             <br />
@@ -27,35 +31,38 @@ export default function Hero() {
           </h1>
           <p
             className={`${
-              currentTheme === "light" ? "text-gray-700 co" : "text-white co"
-            } text-start mt-6`}
+              currentTheme === "light"
+                ? "text-gray-700 co px-3"
+                : "text-white co px-3"
+            } mt-6 text-base lg:text-lg`}
           >
             From Software Development to End-to-End Digital
-            <br />
+            <br className="hidden md:block" />
             Solutions
           </p>
-          <div className="w-full flex flex-row justify-center items-start gap-24 mt-8">
+          <div className="flex flex-col lg:flex-row justify-center lg:justify-start gap-4 lg:gap-8 mt-8">
             <Link
-              className={`btn btn-outline px-12 font-bold ${
+              className={`btn btn-outline font-bold px-8 ${
                 currentTheme === "light"
                   ? "text-black border-purple-800 hover:bg-purple-800 hover:text-white"
                   : "text-white border-purple-800 hover:bg-purple-800 hover:text-white"
-              }`}
+              } px-8 py-3`}
             >
               Projects
+              <FaArrowUp className="rotate-45 text-xl" />
             </Link>
-            <Link className="btn btn-primary bg-purple-800 border-none text-white font-bold px-8 hover:bg-purple-600">
+            <Link className="btn btn-primary bg-purple-800 border-none text-white font-bold px-8 py-3 hover:bg-purple-600 flex items-center justify-center gap-2">
               Book a Call
-              <FaArrowUp className="inline-block rotate-45 text-xl" />
+              <FaArrowUp className="rotate-45 text-xl" />
             </Link>
           </div>
         </div>
         {/* Right Section */}
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center mt-8 lg:mt-0 overflow-hidden">
           <img
-            className="animate-spin-slow max-w-full h-auto"
+            className="max-w-full h-auto animate-spin-slow"
             src={hero}
-            alt=""
+            alt="Hero Illustration"
           />
         </div>
       </div>

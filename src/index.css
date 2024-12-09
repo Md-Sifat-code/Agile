@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  overflow-x: hidden;
+}
+.container {
+  overflow-x: hidden;
+}
+html {
+  overflow-x: hidden;
+}
 .fo {
   font-family: "Fontdiner Swanky", serif;
 }
@@ -32,4 +41,11 @@
 
 .co {
   font-family: "Courier Prime", monospace;
+}
+.pop {
+  font-family: "Poppins", sans-serif;
+}
+
+.r {
+  font-family: "Roboto", sans-serif;
 }
