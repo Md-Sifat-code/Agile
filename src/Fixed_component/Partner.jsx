@@ -25,10 +25,10 @@ export default function Partner() {
   }, []);
 
   return (
-    <section>
+    <section className="bg-[#08020e]">
       <div className="container mx-auto px-4">
         <h1
-          className="pop text-white text-5xl font-light text-center mb-12"
+          className=" mt-12 pop text-white text-5xl font-light text-center mb-12"
           data-aos="zoom-in"
         >
           PARTNER{" "}
@@ -37,13 +37,13 @@ export default function Partner() {
         <div className="flex flex-wrap lg:flex-row md:flex-col gap-12 justify-center items-stretch">
           {/* Card 1 */}
           <div
-            className="border bg-[#23262a] flex flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8"
+            className=" shadow-2xl shadow-[#430847] bg-[#0f041a] flex rounded-[18px] flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8 text-white"
             data-aos="zoom-in"
             data-aos-delay="100"
           >
             <div className="flex flex-row gap-5 items-center">
               <SiJirasoftware className="text-5xl font-bold text-purple-800" />
-              <h1 className="pop text-white font-bold text-xl">
+              <h1 className="pop font-bold text-xl">
                 Custom
                 <br />
                 <span className="font-medium">Website/App</span>
@@ -51,7 +51,7 @@ export default function Partner() {
                 Development
               </h1>
             </div>
-            <p className="my-6 text-white text-start">
+            <p className="my-6 text-start text-gray-300">
               At Lember, we offer custom software development services that
               encompass a full spectrum of IT solutions. By combining our
               expertise with innovative strategies, we deliver exceptional
@@ -67,19 +67,19 @@ export default function Partner() {
           </div>
           {/* Card 2 */}
           <div
-            className="border bg-[#23262a] flex flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8"
+            className="shadow-2xl shadow-[#430847] bg-[#0f041a] flex rounded-[18px] flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8 text-white"
             data-aos="zoom-in"
-            data-aos-delay="200"
+            data-aos-delay="100"
           >
             <div className="flex flex-row gap-5 items-center">
               <AiOutlineTeam className="text-5xl font-bold text-purple-800" />
-              <h1 className="pop text-white font-bold text-xl">
+              <h1 className="pop font-bold text-xl">
                 Team
                 <br />
                 <span className="font-medium">Assemblement</span>
               </h1>
             </div>
-            <p className="my-6 text-white text-start">
+            <p className="my-6 text-start text-gray-300">
               A team of IT specialists develops unique software products,
               helping clients reduce development costs. From React and Angular
               to Python and Node.js, we provide dedicated teams globally. Share
@@ -94,19 +94,19 @@ export default function Partner() {
           </div>
           {/* Card 3 */}
           <div
-            className="border bg-[#23262a] flex flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8"
+            className="shadow-2xl shadow-[#430847] bg-[#0f041a] flex rounded-[18px] flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8 text-white mb-14"
             data-aos="zoom-in"
-            data-aos-delay="300"
+            data-aos-delay="100"
           >
             <div className="flex flex-row gap-5 items-center">
               <FaBrain className="text-5xl font-bold text-purple-800" />
-              <h1 className="pop text-white font-bold text-xl">
+              <h1 className="pop font-bold text-xl">
                 AI
                 <br />
                 <span className="font-medium">Integration</span>
               </h1>
             </div>
-            <p className="my-6 text-white text-start">
+            <p className="my-6 text-start text-gray-300">
               AI and machine learning have revolutionized IT. Start an AI-based
               project or enhance your current software with our engineers who
               specialize in sophisticated AI solutions. Share your business

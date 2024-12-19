@@ -1,36 +1,36 @@
 import React from "react";
-import logo from "/download.png";
+import gift from "/extra-unscreen.gif";
 
 export default function ChooseUs() {
   return (
     <section className="bg-[#1e2124]">
-      <div className="flex border-t rounded-tl-[42px] rounded-tr-[42px] flex-col justify-center items-center mt-[100px] p-12 px-4 lg:px-8">
+      <div className="flex flex-col justify-center items-center bg-[#08020e] p-12 px-4 lg:px-8">
         <div>
-          <h1 className="text-4xl lg:text-5xl font-light text-white text-center pop">
+          <h1 className="text-4xl lg:text-5xl text-white font-light text-center pop mt-12">
             Why Choose{" "}
             <span className="font-bold text-white">
-              A<span className="text-purple-800 fo">g</span>ile
+              A<span className="text-purple-800 text-6xl fo">g</span>ile
             </span>
           </h1>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 mt-12 gap-8 items-center">
-          {/* Image Section */}
+        <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* GIF Section */}
           <div className="flex justify-center items-center overflow-hidden">
             <img
-              className="max-w-full h-auto animate-spin-slow"
-              src={logo}
-              alt="Agile Logo"
+              src={gift}
+              alt="Why Choose Us GIF"
+              className="w-full lg:w-[70%] p-14 object-contain"
             />
           </div>
           {/* Text Section */}
-          <div className="text-white pop flex flex-col font-semibold gap-6 px-4 lg:px-8">
-            <p className="w-full lg:w-[80%]">
+          <div className=" rounded-[18px] w-[70%] p-4 shadow-2xl shadow-[#430847] pop flex flex-col justify-center items-center font-semibold gap-6 px-4 lg:px-8 text-gray-400 text-[] bg-[#0f041a]">
+            <p className=" p-4  text-center w-full lg:w-[80%]">
               Glowing universe One of the main drivers of our constant progress
               and desire to be better in the IT business is when customers tell
               us about how our software solutions have helped them finally
               achieve their tech or business goals.
             </p>
-            <p className="w-full lg:w-[80%]">
+            <p className="w-full text-center lg:w-[80%]">
               Each scenario presents a distinct challenge and opportunity, and
               every step is a decision that affects hundreds of small components
               of a project. Our team is united by a common goal:{" "}
@@ -39,7 +39,7 @@ export default function ChooseUs() {
                 enhance productivity.
               </span>
             </p>
-            <p className="w-full lg:w-[80%]">
+            <p className="w-full text-center lg:w-[80%]">
               We believe in our capabilities and strive to turn your software
               development journey into a strategic advantage that highlights
               your strengths and lets you fully reach your potential. We would

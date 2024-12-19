@@ -1,106 +1,134 @@
 import React, { useState } from "react";
-import { FaArrowUp, FaSun, FaMoon } from "react-icons/fa"; // Import the up arrow and sun/moon icons
-import { useThemeSwitcher } from "react-css-theme-switcher"; // Import the theme switcher hook
+import { FaArrowUp, FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const { switcher, currentTheme } = useThemeSwitcher(); // Get theme switcher and current theme
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleDropdown = (e) => {
-    e.preventDefault(); // Prevent navigation
-    setIsDropdownOpen(!isDropdownOpen); // Toggle dropdown
+    e.preventDefault();
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const handleThemeToggle = () => {
-    switcher({ theme: currentTheme === "light" ? "dark" : "light" }); // Toggle theme
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
+      setIsMobileMenuOpen(false); // Close menu on navigation
     }
   };
 
   return (
-    <section>
-      <div className="container mx-auto flex flex-col lg:flex-row justify-center items-center lg:justify-around">
-        {/* logo */}
-        <div
-          className={`text-5xl ${
-            currentTheme === "light" ? "text-black" : "text-white"
-          } ma font-bold mt-8`}
-        >
+    <section className="bg-[#04030c]">
+      <div className="container mx-auto flex flex-row justify-between items-center px-4 py-4 lg:px-8 lg:py-6 mt-8">
+        {/* Logo */}
+        <div className="text-6xl text-white ma font-bold">
           <h1>
-            A<span className="fo text-purple-800">g</span>ile
+            A<span className="fo text-purple-800 text-7xl">g</span>ile
           </h1>
         </div>
-        <div className="mt-8 flex flex-col  lg:flex-row justify-center items-center gap-6 lg:gap-12 font-bold">
+
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex flex-row justify-center items-center gap-8 font-bold">
           <button
             onClick={() => scrollToSection("home")}
-            className={`${
-              currentTheme === "light" ? "text-black" : "text-white"
-            } relative border-b-2 py-6 border-transparent hover:border-purple-800 transition-all`}
+            className="text-white relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
           >
             Home
           </button>
           <button
             onClick={() => scrollToSection("about")}
-            className={`${
-              currentTheme === "light" ? "text-black" : "text-white"
-            } relative border-b-2 py-6 border-transparent hover:border-purple-800 transition-all`}
+            className="text-white relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
           >
             About Us
           </button>
           <button
             onClick={() => scrollToSection("projects")}
-            className={`${
-              currentTheme === "light" ? "text-black" : "text-white"
-            } relative border-b-2 py-6 border-transparent hover:border-purple-800 transition-all`}
+            className="text-white relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
           >
             Projects
           </button>
           <button
             onClick={() => scrollToSection("testimonials")}
-            className={`${
-              currentTheme === "light" ? "text-black" : "text-white"
-            } relative border-b-2 py-6 border-transparent hover:border-purple-800 transition-all`}
+            className="text-white relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
           >
             Testimonials
           </button>
-
           <button
             onClick={() => scrollToSection("contact")}
-            className={`${
-              currentTheme === "light" ? "text-black" : "text-white"
-            } relative border-b-2 py-6 border-transparent hover:border-purple-800 transition-all`}
+            className="text-white relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
           >
             Contact
           </button>
-        </div>
-        <div className="flex items-center gap-4">
-          <button
-            className={`btn mt-8 px-8 ${
-              currentTheme === "light" ? "text-black  border" : "text-white"
-            } border-2 border-transparent bg-transparent gradient-border hover:bg-gradient-to-b from-purple-400 to-purple-900 hover:border-black hover:rounded-none`}
-          >
+          <button className="btn px-6 text-white border-2 border-transparent bg-transparent gradient-border hover:bg-gradient-to-b from-purple-400 to-purple-900 hover:border-black hover:rounded-none">
             Book a Call
             <FaArrowUp className="ml-2 transform rotate-45" />
           </button>
+        </div>
 
-          {/* Theme Switcher Button */}
+        {/* Mobile Menu Icon */}
+        <div className="lg:hidden flex items-center">
           <button
-            onClick={handleThemeToggle}
-            className="mt-8 p-2 text-white border-2 border-transparent bg-black hover:bg-gray-700 rounded-full"
+            onClick={toggleMobileMenu}
+            className="text-white text-3xl focus:outline-none"
           >
-            {currentTheme === "light" ? (
-              <FaMoon className="text-yellow-400 " />
-            ) : (
-              <FaSun className="text-yellow-400" />
-            )}
+            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
       </div>
+
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 bg-[#04030c] bg-opacity-95 z-50 flex flex-col items-center justify-center gap-6 font-bold">
+          {/* Close Button */}
+          <button
+            onClick={toggleMobileMenu}
+            className="absolute top-6 right-6 text-white text-3xl z-50 focus:outline-none"
+          >
+            <FaTimes />
+          </button>
+
+          {/* Navigation Links */}
+          <button
+            onClick={() => scrollToSection("home")}
+            className="text-white text-lg relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
+          >
+            Home
+          </button>
+          <button
+            onClick={() => scrollToSection("about")}
+            className="text-white text-lg relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
+          >
+            About Us
+          </button>
+          <button
+            onClick={() => scrollToSection("projects")}
+            className="text-white text-lg relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
+          >
+            Projects
+          </button>
+          <button
+            onClick={() => scrollToSection("testimonials")}
+            className="text-white text-lg relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
+          >
+            Testimonials
+          </button>
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="text-white text-lg relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
+          >
+            Contact
+          </button>
+          <button className="btn px-6 text-white border-2 border-transparent bg-transparent gradient-border hover:bg-gradient-to-b from-purple-400 to-purple-900 hover:border-black hover:rounded-none">
+            Book a Call
+            <FaArrowUp className="ml-2 transform rotate-45" />
+          </button>
+        </div>
+      )}
     </section>
   );
 }
