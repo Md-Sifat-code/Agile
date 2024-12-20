@@ -34,7 +34,7 @@ export default function Partner() {
           PARTNER{" "}
           <span className="text-white ma font-bold text-7xl">WITH US</span>
         </h1>
-        <div className="flex flex-wrap lg:flex-row md:flex-col gap-12 justify-center items-stretch">
+        <div className="flex flex-wrap lg:flex-row md:flex-col gap-12 justify-center items-center lg:items-stretch">
           {/* Card 1 */}
           <div
             className=" shadow-2xl shadow-[#430847] bg-[#0f041a] flex rounded-[18px] flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8 text-white"

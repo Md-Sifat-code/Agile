@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-three/fiber": "^8.17.10",
     "aos": "^2.3.4",
+    "firebase": "^11.1.0",
     "lil-gui": "^0.20.0",
     "localforage": "^1.10.0",
     "match-sorter": "^8.0.0",
