@@ -23,7 +23,7 @@ export default function ChooseUs() {
             <img
               src={gift}
               alt="Why Choose Us GIF"
-              className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] object-contain p-6 sm:p-10 md:p-14"
+              className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[95%] object-contain p-6 sm:p-10 md:p-14"
             />
           </div>
           {/* Text Section */}

@@ -52,7 +52,7 @@ export default function Partner() {
               </h1>
             </div>
             <p className="my-6 text-start text-gray-300">
-              At Lember, we offer custom software development services that
+              At Agile, we offer custom Web and App development services that
               encompass a full spectrum of IT solutions. By combining our
               expertise with innovative strategies, we deliver exceptional
               services. With years of experience in managing projects globally,
@@ -82,8 +82,8 @@ export default function Partner() {
             <p className="my-6 text-start text-gray-300">
               A team of IT specialists develops unique software products,
               helping clients reduce development costs. From React and Angular
-              to Python and Node.js, we provide dedicated teams globally. Share
-              your ideas, and we'll build the foundation for successful
+              to Spring Boot and Node.js, we provide dedicated teams globally.
+              Share your ideas, and we'll build the foundation for successful
               projects, whether you are a startup or a large business.
             </p>
             <div className="flex justify-end">

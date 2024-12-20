@@ -23,6 +23,7 @@
     "react-router-dom": "^7.0.2",
     "sort-by": "^1.2.0",
     "stats.js": "^0.17.0",
+    "sweetalert2": "^11.15.2",
     "swiper": "^11.1.15",
     "three": "^0.171.0"
   },
