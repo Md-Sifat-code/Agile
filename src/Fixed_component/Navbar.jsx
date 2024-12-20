@@ -59,7 +59,10 @@ export default function Navbar() {
           >
             Contact
           </button>
-          <button className="btn px-6 text-white border-2 border-transparent bg-transparent gradient-border hover:bg-gradient-to-b from-purple-400 to-purple-900 hover:border-black hover:rounded-none">
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="btn px-6 text-white border-2 border-transparent bg-transparent gradient-border hover:bg-gradient-to-b from-purple-400 to-purple-900 hover:border-black hover:rounded-none"
+          >
             Book a Call
             <FaArrowUp className="ml-2 transform rotate-45" />
           </button>
@@ -118,7 +121,10 @@ export default function Navbar() {
           >
             Contact
           </button>
-          <button className="btn px-6 text-white border-2 border-transparent bg-transparent gradient-border hover:bg-gradient-to-b from-purple-400 to-purple-900 hover:border-black hover:rounded-none">
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="btn px-6 text-white border-2 border-transparent bg-transparent gradient-border hover:bg-gradient-to-b from-purple-400 to-purple-900 hover:border-black hover:rounded-none"
+          >
             Book a Call
             <FaArrowUp className="ml-2 transform rotate-45" />
           </button>

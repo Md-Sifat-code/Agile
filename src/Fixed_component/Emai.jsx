@@ -43,7 +43,7 @@ export default function Emai() {
           </h1>
           <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl w-full sm:w-[80%] md:w-[70%]">
             For more information, send us your details, requirements, and
-            project details. We will reach out to you within 2-4 working hours.
+            project details. We will reach out to you within 2-23 working hours.
             <span className="m-4 text-purple-600 text-base sm:text-lg md:text-xl font-bold ma">
               Happy Browsing!!
             </span>
