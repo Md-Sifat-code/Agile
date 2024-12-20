@@ -30,7 +30,10 @@ export default function Emai() {
   };
 
   return (
-    <section className="bg-[#08020e] text-gray-300 py-12 px-4 sm:px-8 lg:px-16">
+    <section
+      id="contact"
+      className="bg-[#08020e] text-gray-300 py-12 px-4 sm:px-8 lg:px-16"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-12">
         {/* Left Side */}
         <div className="flex flex-col justify-center items-center text-center">

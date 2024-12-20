@@ -1,57 +1,103 @@
 import React from "react";
-import gift from "/extra-unscreen.gif";
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 export default function ChooseUs() {
+  React.useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="bg-[#1e2124]">
-      <div className="flex flex-col justify-center items-center bg-[#08020e] py-8 px-4 sm:px-6 md:px-12 lg:px-16">
-        <div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl text-white font-light text-center pop mt-8 md:mt-12">
-            Why Choose{" "}
+      <div className="flex flex-col justify-center items-center bg-[#08020e] py-16 px-6 sm:px-8 md:px-12 lg:px-20">
+        {/* Heading Section */}
+        <div className="text-center" data-aos="fade-up">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl text-white font-light pop">
+            Why Choose
             <span className="font-bold text-white">
+              {" "}
               A
               <span className="text-purple-800 text-5xl sm:text-6xl md:text-7xl fo">
                 g
               </span>
-              ile
+              iles
             </span>
           </h1>
+          <p className="mt-6 text-gray-400 text-sm sm:text-base md:text-lg max-w-4xl mx-auto">
+            Agile isn’t just a service—it’s a partner in your journey. We don’t
+            just build websites and applications; we craft solutions that
+            empower, inspire, and elevate your business to new heights.
+          </p>
         </div>
-        <div className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 place-items-center items-center">
-          {/* GIF Section */}
-          <div className="flex justify-center items-center overflow-hidden">
-            <img
-              src={gift}
-              alt="Why Choose Us GIF"
-              className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[95%] object-contain p-6 sm:p-10 md:p-14"
-            />
-          </div>
-          {/* Text Section */}
-          <div className="rounded-lg w-full max-w-[95%] sm:max-w-[85%] md:max-w-[75%] lg:max-w-[70%] p-4 sm:p-6 md:p-8 shadow-xl shadow-[#430847] pop flex flex-col justify-center items-center font-medium gap-6 text-gray-300 bg-[#0f041a]">
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-center px-4 sm:px-6">
-              Glowing universe is one of the main drivers of our constant
-              progress and desire to be better in the IT business. We listen to
-              our customers and ensure our software solutions help them achieve
-              their tech or business goals.
-            </p>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-center px-4 sm:px-6">
-              Each scenario presents a distinct challenge and opportunity. Every
-              step affects countless components of a project. Our team is united
-              by a common goal:{" "}
-              <span className="text-purple-800">
-                helping you transform your company’s business operations and
-                enhance productivity.
-              </span>
-            </p>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-center px-4 sm:px-6">
-              We believe in our capabilities and aim to turn your software
-              development journey into a strategic advantage. Let us demonstrate
-              our skills and craft a custom solution, even if others have said
-              it’s impossible.
+
+        {/* Content Section */}
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-6xl w-full">
+          {/* First Feature */}
+          <div
+            className="flex flex-col justify-center items-center bg-[#0f041a] p-8 rounded-lg shadow-2xl shadow-[#430847] hover:scale-105 transition-transform duration-300"
+            data-aos="fade-right"
+          >
+            <h2 className="text-xl sm:text-2xl text-white font-semibold text-center">
+              Client-Centric Approach
+            </h2>
+            <p className="mt-4 text-gray-300 text-center text-sm sm:text-base">
+              We put your needs first, tailoring our solutions to your vision.
+              Your success fuels our passion to innovate and deliver excellence.
             </p>
           </div>
+
+          {/* Second Feature */}
+          <div
+            className="flex flex-col justify-center items-center bg-[#0f041a] p-8 rounded-lg shadow-2xl shadow-[#430847] hover:scale-105 transition-transform duration-300"
+            data-aos="zoom-in"
+          >
+            <h2 className="text-xl sm:text-2xl text-white font-semibold text-center">
+              Innovative Solutions
+            </h2>
+            <p className="mt-4 text-gray-300 text-center text-sm sm:text-base">
+              We merge creativity and technology to design solutions that not
+              only meet but exceed expectations, helping you stand out in a
+              crowded market.
+            </p>
+          </div>
+
+          {/* Third Feature */}
+          <div
+            className="flex flex-col justify-center items-center bg-[#0f041a] p-8 rounded-lg shadow-2xl shadow-[#430847] hover:scale-105 transition-transform duration-300"
+            data-aos="fade-left"
+          >
+            <h2 className="text-xl sm:text-2xl text-white font-semibold text-center">
+              Dedicated Support
+            </h2>
+            <p className="mt-4 text-gray-300 text-center text-sm sm:text-base">
+              From brainstorming to implementation and beyond, we stand by your
+              side, ensuring every milestone brings you closer to your goals.
+            </p>
+          </div>
+        </div>
+
+        {/* Call to Action Section */}
+        <div className="mt-16 text-center" data-aos="fade-up">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-400">
+            Ready to transform your ideas into reality?
+          </p>
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="mt-6 px-8 py-3 bg-purple-800 text-white font-semibold rounded-lg shadow-md hover:bg-purple-900 transition-colors duration-300"
+          >
+            Let’s Get Started
+          </button>
         </div>
       </div>
+
+      {/* Contact Section (for demonstration purposes) */}
     </section>
   );
 }

@@ -26,20 +26,15 @@ export default function Navbar() {
     <section className="bg-[#04030c]">
       <div className="container mx-auto flex flex-row justify-between items-center px-4 py-4 lg:px-8 lg:py-6 mt-8">
         {/* Logo */}
-        <div className="text-6xl text-white ma font-bold">
+        <div className="text-5xl lg:text-6xl text-white ma font-bold">
           <h1>
-            A<span className="fo text-purple-800 text-7xl">g</span>ile
+            A<span className="fo text-purple-800 text-6xl lg:text-7xl">g</span>
+            iles
           </h1>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex flex-row justify-center items-center gap-8 font-bold">
-          <button
-            onClick={() => scrollToSection("home")}
-            className="text-white relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
-          >
-            Home
-          </button>
           <button
             onClick={() => scrollToSection("about")}
             className="text-white relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"

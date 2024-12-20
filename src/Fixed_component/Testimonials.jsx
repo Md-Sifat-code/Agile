@@ -16,7 +16,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className=" text-white py-12 bg-[#08020e]">
+    <section id="testimonials" className=" text-white py-12 bg-[#08020e]">
       <div className="container mx-auto">
         <div className="flex flex-col gap-4 justify-center items-center">
           <h1 className="pop font-light text-4xl text-center text-white mt-12">
