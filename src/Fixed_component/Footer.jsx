@@ -13,7 +13,7 @@ export default function Footer() {
 
   return (
     <section className="bg-[#08020e]">
-      <footer className="footer container mx-auto  flex flex-col lg:flex-row justify-around items-start lg:items-center mt-12 text-base-content p-10">
+      <footer className="footer container mx-auto flex flex-col lg:flex-row justify-around items-start lg:items-center mt-12 text-base-content p-10">
         {/* Company Section */}
         <aside className="flex flex-col gap-4">
           <div className="text-4xl text-white ma font-bold">
@@ -102,6 +102,18 @@ export default function Footer() {
           </a>
         </nav>
       </footer>
+
+      {/* Copyright Section */}
+      <div className="bg-[#08020e] text-center py-4 text-white border-t border-gray-700">
+        <p>
+          © {new Date().getFullYear()} Agile Company Limited. All rights
+          reserved.
+        </p>
+        <p className="mt-2">
+          Developed by <span className="text-purple-800">Md Sifat</span> /{" "}
+          <span className="text-purple-800">Yeamim Sajid</span>
+        </p>
+      </div>
     </section>
   );
 }
