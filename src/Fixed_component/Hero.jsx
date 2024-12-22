@@ -6,6 +6,9 @@ import hero from "/rb_20414.png";
 import ng from "/1209998-3840x2160-desktop-4k-glow-in-the-dark-background-photo.jpg";
 
 export default function Hero() {
+  const scrollToSection = (sectionId) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <section
       className="relative py-10"
@@ -47,10 +50,13 @@ export default function Hero() {
               Projects
               <FaArrowUp className="rotate-45 text-lg" />
             </Link>
-            <Link className="btn btn-primary bg-purple-800 border-none text-sm sm:text-base font-bold px-8 sm:px-8 py-3 hover:bg-purple-600 flex text-white items-center justify-center gap-2">
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="btn btn-primary bg-purple-800 border-none text-sm sm:text-base font-bold px-8 sm:px-8 py-3 hover:bg-purple-600 flex text-white items-center justify-center gap-2"
+            >
               Book a Call
               <FaArrowUp className="rotate-45 text-lg" />
-            </Link>
+            </button>
           </div>
         </div>
         {/* Right Section */}
