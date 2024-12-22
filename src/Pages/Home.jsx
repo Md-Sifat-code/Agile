@@ -6,6 +6,7 @@ import ChooseUs from "../Fixed_component/ChooseUs";
 import Testimonials from "../Fixed_component/Testimonials";
 import Emai from "../Fixed_component/Emai";
 import AboutUs from "../Fixed_component/AboutUs";
+import TechnologyStack from "../Fixed_component/TechnologyStack";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Partner />
         <AboutUs />
         <ChooseUs />
+        <TechnologyStack />
         <Testimonials />
         <Emai />
       </div>
