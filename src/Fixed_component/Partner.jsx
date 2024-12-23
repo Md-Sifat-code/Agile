@@ -28,7 +28,7 @@ export default function Partner() {
     <section className="bg-[#08020e]">
       <div className="container mx-auto px-4">
         <h1
-          className=" mt-12 pop text-white text-5xl font-light text-center mb-12"
+          className=" mt-[-18px] pop text-white text-5xl font-light text-center mb-12"
           data-aos="zoom-in"
         >
           PARTNER{" "}
