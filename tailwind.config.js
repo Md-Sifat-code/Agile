@@ -13,5 +13,6 @@ export default {
   },
   plugins: [
     require('daisyui'),
+    require('tailwindcss-textshadow'), // Add this line to include text-shadow
   ],
 };
