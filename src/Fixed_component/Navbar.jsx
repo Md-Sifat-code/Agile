@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { FaArrowUp, FaBars, FaTimes } from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleDropdown = (e) => {
-    e.preventDefault();
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -21,6 +18,9 @@ export default function Navbar() {
       setIsMobileMenuOpen(false); // Close menu on navigation
     }
   };
+
+  // Helper function to determine active link
+  const isActive = (path) => location.pathname === path;
 
   return (
     <section className="bg-[#04030c]">
@@ -35,18 +35,30 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex flex-row justify-center items-center gap-8 font-bold">
-          <button
-            onClick={() => scrollToSection("about")}
-            className="text-white relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
+          <Link
+            to="/"
+            className={`text-white relative border-b-2 py-2 ${
+              isActive("/") ? "border-purple-800" : "border-transparent"
+            } hover:border-purple-800 transition-all`}
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className={`text-white relative border-b-2 py-2 ${
+              isActive("/about") ? "border-purple-800" : "border-transparent"
+            } hover:border-purple-800 transition-all`}
           >
             About Us
-          </button>
-          <button
-            onClick={() => scrollToSection("projects")}
-            className="text-white relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
+          </Link>
+          <Link
+            to="/projects"
+            className={`text-white relative border-b-2 py-2 ${
+              isActive("/projects") ? "border-purple-800" : "border-transparent"
+            } hover:border-purple-800 transition-all`}
           >
             Projects
-          </button>
+          </Link>
           <button
             onClick={() => scrollToSection("testimonials")}
             className="text-white relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
@@ -91,24 +103,33 @@ export default function Navbar() {
           </button>
 
           {/* Navigation Links */}
-          <button
-            onClick={() => scrollToSection("home")}
-            className="text-white text-lg relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
+          <Link
+            to="/"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`text-white text-lg relative border-b-2 py-2 ${
+              isActive("/") ? "border-purple-800" : "border-transparent"
+            } hover:border-purple-800 transition-all`}
           >
             Home
-          </button>
-          <button
-            onClick={() => scrollToSection("about")}
-            className="text-white text-lg relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
+          </Link>
+          <Link
+            to="/about"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`text-white text-lg relative border-b-2 py-2 ${
+              isActive("/about") ? "border-purple-800" : "border-transparent"
+            } hover:border-purple-800 transition-all`}
           >
             About Us
-          </button>
-          <button
-            onClick={() => scrollToSection("projects")}
-            className="text-white text-lg relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
+          </Link>
+          <Link
+            to="/projects"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`text-white text-lg relative border-b-2 py-2 ${
+              isActive("/projects") ? "border-purple-800" : "border-transparent"
+            } hover:border-purple-800 transition-all`}
           >
             Projects
-          </button>
+          </Link>
           <button
             onClick={() => scrollToSection("testimonials")}
             className="text-white text-lg relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
