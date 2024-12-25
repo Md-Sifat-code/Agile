@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { HiOutlineSlash } from "react-icons/hi2";
+import { FaLightbulb, FaRocket, FaHandshake } from "react-icons/fa";
 import sd from "/sdaa.png";
 
 export default function About() {
   return (
     <section>
       <div className="container mx-auto mt-12 bg-[#08020e] px-4">
+        {/* Breadcrumb Navigation */}
         <div className="flex flex-wrap items-center space-x-2 py-4">
           <Link
             to={"/"}
@@ -42,15 +44,14 @@ export default function About() {
             </div>
 
             {/* Right Section: Image */}
-            <div className="flex  justify-center lg:justify-end items-center  px-4 md:px-0">
-              <img className="" src={sd} alt="Agiles" />
+            <div className="flex justify-center lg:justify-end items-center px-4 md:px-0">
+              <img className="rounded-lg shadow-lg" src={sd} alt="Agiles" />
             </div>
           </div>
         </div>
-
         {/* Horizontal Divider */}
         <div className="flex justify-center items-center mt-12">
-          <div className="h-auto lg:h-52 w-full md:w-[70%] border border-gray-600 grid grid-cols-1 lg:grid-cols-3 rounded-[42px] p-4 md:p-0 gap-6 md:gap-0 bg-[#0f041a] shadow-2xl shadow-[#430847] ">
+          <div className="h-auto lg:h-52 w-full md:w-[70%] border border-gray-600 grid grid-cols-1 lg:grid-cols-3 rounded-[42px] p-4 md:p-0 gap-6 md:gap-0 bg-[#0f041a] shadow-2xl shadow-[#430847]">
             <div className="flex flex-col justify-center items-center text-center p-4 lg:p-0">
               <h1 className="text-white text-xl md:text-2xl font-semibold">
                 What makes us unique
@@ -74,13 +75,66 @@ export default function About() {
             </div>
           </div>
         </div>
-        {/* another section */}
-        <div className="container mx-auto flex justify-center items-center mt-20">
-          <div className="md:w-[70%] grid grid-cols-12 grid-rows-12 h-[800px] border ">
-            <h1 className=" text-white col-span-12 uppercase text-start ma text-6xl font-normal ">
-              How we work
-            </h1>
-            <div></div>
+
+        {/* Our Story Section */}
+        <div className="container mx-auto mt-20 overflow-hidden">
+          {/* Cards Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Vision Card */}
+            <div className="bg-[#0f041a] bg-opacity-80 backdrop-blur-lg rounded-lg shadow-2xl p-8 text-center transition-transform transform hover:scale-105 will-change-transform">
+              <div className="flex justify-center items-center mb-4 text-purple-800">
+                <FaLightbulb className="text-4xl" />
+              </div>
+              <h2 className="text-purple-800 text-2xl font-bold mb-4">
+                Our Vision
+              </h2>
+              <p className="text-gray-300 text-sm md:text-base">
+                To empower businesses worldwide by delivering innovative and
+                scalable digital solutions that bridge the gap between ambition
+                and technology.
+              </p>
+            </div>
+
+            {/* Dream Card */}
+            <div className="bg-[#0f041a] bg-opacity-80 backdrop-blur-lg rounded-lg shadow-2xl p-8 text-center transition-transform transform hover:scale-105 will-change-transform">
+              <div className="flex justify-center items-center mb-4 text-purple-800">
+                <FaRocket className="text-4xl" />
+              </div>
+              <h2 className="text-purple-800 text-2xl font-bold mb-4">
+                Our Dream
+              </h2>
+              <p className="text-gray-300 text-sm md:text-base">
+                To become a global leader in technology services, fostering a
+                collaborative ecosystem that inspires innovation and excellence.
+              </p>
+            </div>
+
+            {/* Mission Card */}
+            <div className="bg-[#0f041a] bg-opacity-80 backdrop-blur-lg rounded-lg shadow-2xl p-8 text-center transition-transform transform hover:scale-105 will-change-transform">
+              <div className="flex justify-center items-center mb-4 text-purple-800">
+                <FaHandshake className="text-4xl" />
+              </div>
+              <h2 className="text-purple-800 text-2xl font-bold mb-4">
+                Our Mission
+              </h2>
+              <p className="text-gray-300 text-sm md:text-base">
+                To craft tailored websites and applications that transform ideas
+                into impactful digital experiences, driven by client
+                satisfaction.
+              </p>
+            </div>
+          </div>
+          <div className="mt-12 flex items-center justify-center w-full">
+            <Link
+              to={"/"}
+              className="btn btn-outline text-white font-bold pop border-purple-800 px-8 hover:bg-purple-800"
+            >
+              Contact Us
+            </Link>
+          </div>
+
+          <div>
+            <h1></h1>
           </div>
         </div>
       </div>
