@@ -19,12 +19,14 @@ export default function About() {
         </div>
 
         {/* Main Content */}
-        <div className="flex justify-center items-center">
-          <div className="w-full md:w-[90%] grid grid-cols-1 md:grid-cols-2 mt-4 gap-8">
+        <div className="flex justify-center items-center mt-8">
+          <div className="w-[70%]  grid grid-cols-1 md:grid-cols-2 mt-4 gap-8">
             {/* Left Section: Text */}
             <div className="flex flex-col justify-center items-start gap-4">
-              <h1 className="text-4xl pop font-bold text-white">About Us</h1>
-              <p className="text-gray-300 w-full md:w-[80%]">
+              <h1 className="text-4xl pop font-bold text-white text-start">
+                About Us
+              </h1>
+              <p className="text-gray-300 w-full md:w-[90%]">
                 Agiles is a website and app development company that is
                 passionate about coding and balancing customer needs with the
                 right tech solutions. For over 10 years, we have been creating
@@ -38,7 +40,7 @@ export default function About() {
             </div>
 
             {/* Right Section: Image */}
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-end">
               {/* Replace the text with the image */}
               <img src={sd} alt="Agiles" className="max-w-full h-auto" />
             </div>
@@ -47,7 +49,23 @@ export default function About() {
 
         {/* Horizontal Divider */}
         <div className="flex justify-center items-center mt-8">
-          <div className="h-52 w-full md:w-[80%] border border-gray-600"></div>
+          <div className="h-52 w-[70%]  border border-gray-600 grid grid-cols-3 rounded-[42px]">
+            <div className="flex flex-col justify-center items-center">
+              <h1 className="text-white ma text-2xl">What makes us unique</h1>
+            </div>
+            <div className="flex flex-col justify-center items-center">
+              <p className="text-white  font-medium text-start pop">
+                At Agiles, we always strive to create solutions specifically
+                tailored to our clients’ needs. No matter the complexity of your
+                project, its duration, or the set of functions you want us to
+                integrate or develop, our mission remains the same.
+              </p>
+            </div>
+            <div className="flex flex-col justify-center items-center">
+              <h1 className="text-6xl font-bold text-purple-800 r">1+</h1>
+              <p className="text-white pop">years in business</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
