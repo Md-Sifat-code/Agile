@@ -74,6 +74,15 @@ export default function About() {
             </div>
           </div>
         </div>
+        {/* another section */}
+        <div className="container mx-auto flex justify-center items-center mt-20">
+          <div className="md:w-[70%] grid grid-cols-12 grid-rows-12 h-[800px] border ">
+            <h1 className=" text-white col-span-12 uppercase text-start ma text-6xl font-normal ">
+              How we work
+            </h1>
+            <div></div>
+          </div>
+        </div>
       </div>
     </section>
   );
