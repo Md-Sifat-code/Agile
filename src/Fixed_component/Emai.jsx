@@ -104,7 +104,7 @@ const Emai = () => {
         type={type}
         name={name}
         placeholder={placeholder}
-        className="input input-bordered text-black bg-white"
+        className="input input-bordered text-black bg-[#2b2f33]"
         value={formik.values[name]}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
@@ -126,7 +126,7 @@ const Emai = () => {
             Reach Out with your
             <br /> Thoughts
           </h1>
-          <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl w-full sm:w-[80%] md:w-[70%]">
+          <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl w-full sm:w-[80%] md:w-[70%] pop">
             For more information, send us your details, requirements, and
             project details. We will reach out to you within 2-23 working hours.
             <span className="m-4 text-purple-600 text-base sm:text-lg md:text-xl font-bold ma">
@@ -190,7 +190,7 @@ const Emai = () => {
                 id="messageContent"
                 name="messageContent"
                 placeholder="Briefly describe your requirements"
-                className="w-full bg-white text-black p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-800"
+                className="w-full bg-[#2b2f33] text-black p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-800"
                 rows="10"
                 value={formik.values.messageContent}
                 onChange={formik.handleChange}

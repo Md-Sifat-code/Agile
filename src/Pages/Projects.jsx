@@ -15,7 +15,7 @@ export default function Projects() {
       <div className="container mx-auto px-4">
         {/* Navigation Breadcrumb */}
         <div className="flex justify-center items-center">
-          <div className="w-full lg:w-[70%] mt-12">
+          <div className="w-full  mt-12">
             <h1 className="text-white font-normal flex flex-row justify-start items-center text-sm lg:text-lg">
               <Link to={"/"}>Home</Link>{" "}
               <IoIosArrowRoundForward className="inline-block text-lg lg:text-xl" />{" "}
@@ -28,10 +28,10 @@ export default function Projects() {
 
         {/* Title and Description */}
         <div className="flex justify-center items-center mt-6">
-          <div className="w-full lg:w-[70%]">
+          <div className="w-full ">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Left Side: Title and Description */}
-              <div className="flex flex-col justify-start items-start gap-6">
+              <div className="flex flex-col justify-center items-start gap-6">
                 <h1 className="text-3xl lg:text-5xl text-white font-bold leading-tight">
                   Projects that we co-
                   <br />
@@ -47,9 +47,9 @@ export default function Projects() {
               </div>
 
               {/* Right Side: Image */}
-              <div className="flex justify-center lg:justify-end items-center">
+              <div className="flex justify-center lg:justify-center items-center">
                 <img
-                  className="w-[150px] h-[150px] lg:w-[250px] lg:h-[250px]"
+                  className="w-[150px] h-[150px] lg:w-[350px] lg:h-[350px]"
                   src={pro}
                   alt="Project"
                 />
@@ -59,9 +59,9 @@ export default function Projects() {
         </div>
 
         {/* Cards Section */}
-        <div className="flex justify-center items-center mt-20">
-          <div className="w-full lg:w-[70%]">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="flex justify-center items-center mt-28">
+          <div className="w-full ">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {/* Card-1 */}
               <div className="card bg-[#0f041a] shadow-2xl shadow-[#430847] transition-all duration-300 rounded-lg overflow-hidden">
                 <div className="flex mt-8 flex-row items-center px-6 lg:px-12 mb-6">
