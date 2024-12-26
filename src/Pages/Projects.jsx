@@ -3,7 +3,10 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 import pro from "/proje.png";
 import project_1 from "/project-1.png";
-
+import project_2 from "/project-2.png";
+import project_3 from "/project-3.png";
+import project_4 from "/project-4.png";
+import project_5 from "/project-5.png";
 export default function Projects() {
   return (
     <section className="h-auto bg-[#08020e] text-white overflow-x-hidden">
@@ -63,10 +66,10 @@ export default function Projects() {
                   <h2 className="font-bold text-lg lg:text-xl flex-1">
                     Medi<span className="text-pink-500">C</span>
                   </h2>
-                  <div className="text-lg lg:text-2xl font-bold">
+                  <div className="ma text-lg lg:text-2xl font-bold">
                     <h1>
                       A
-                      <span className="text-purple-800 text-xl lg:text-3xl">
+                      <span className="fo text-purple-800 text-xl lg:text-3xl">
                         g
                       </span>
                       iles
@@ -107,6 +110,204 @@ export default function Projects() {
                 </figure>
               </div>
               {/* card-2 */}
+              <div className="card bg-[#0f041a] shadow-2xl shadow-[#430847] transition-all duration-300 rounded-lg overflow-hidden">
+                <div className="flex mt-8 flex-row items-center px-6 lg:px-12 mb-6">
+                  <h2 className="font-bold text-lg lg:text-xl flex-1">
+                    Career<span className="text-blue-400">HUB</span>
+                  </h2>
+                  <div className="ma text-lg lg:text-2xl font-bold">
+                    <h1>
+                      A
+                      <span className="text-purple-800 fo text-xl lg:text-3xl">
+                        g
+                      </span>
+                      iles
+                    </h1>
+                  </div>
+                </div>
+                <figure className="relative group">
+                  <img
+                    src={project_2}
+                    alt="Project"
+                    className="w-full h-[200px] md:h-[300px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300  flex-col pop font-bold ">
+                    <div className="flex justify-between gap-12 flex-row p-8">
+                      <h1 className="flex flex-col flex-1">
+                        Timeline<span className="text-gray-400">3months</span>
+                      </h1>
+                      <p className="flex flex-col">
+                        Technologies
+                        <span className="text-gray-400">
+                          Custom Web application Development for Career
+                          Consaltation
+                        </span>
+                      </p>
+                    </div>
+                    <p className="text-purple-800 text-sm lg:text-base px-8 text-start">
+                      A comprehensive Career Cosaltation project providing agile
+                      solutions for Career Guide.
+                    </p>
+                    <div className="w-full flex justify-start px-8">
+                      <Link
+                        className="btn btn-outline border-purple-800 text-white font-bold pop mt-6 px-8"
+                        to={"/"}
+                      >
+                        Contact Us
+                      </Link>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              {/* card-3 */}
+              <div className="card bg-[#0f041a] shadow-2xl shadow-[#430847] transition-all duration-300 rounded-lg overflow-hidden">
+                <div className="flex mt-8 flex-row items-center px-6 lg:px-12 mb-6">
+                  <h2 className="font-bold text-lg lg:text-xl flex-1">
+                    Travel<span className="text-orange-500">Deabel</span>
+                  </h2>
+                  <div className="ma text-lg lg:text-2xl font-bold">
+                    <h1>
+                      A
+                      <span className="text-purple-800 fo text-xl lg:text-3xl">
+                        g
+                      </span>
+                      iles
+                    </h1>
+                  </div>
+                </div>
+                <figure className="relative group">
+                  <img
+                    src={project_3}
+                    alt="Project"
+                    className="w-full h-[200px] md:h-[300px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300  flex-col pop font-bold ">
+                    <div className="flex justify-between gap-12 flex-row p-8">
+                      <h1 className="flex flex-col flex-1">
+                        Timeline<span className="text-gray-400">3months</span>
+                      </h1>
+                      <p className="flex flex-col">
+                        Technologies
+                        <span className="text-gray-400">
+                          Custom Web application Development for Travel Guide
+                        </span>
+                      </p>
+                    </div>
+                    <p className="text-purple-800 text-sm lg:text-base px-8 text-start">
+                      A comprehensive travel Guidance project providing agile
+                      solutions for Travel Guide.
+                    </p>
+                    <div className="w-full flex justify-start px-8">
+                      <Link
+                        className="btn btn-outline border-purple-800 text-white font-bold pop mt-6 px-8"
+                        to={"/"}
+                      >
+                        Contact Us
+                      </Link>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              {/* card-4 */}
+              <div className="card bg-[#0f041a] shadow-2xl shadow-[#430847] transition-all duration-300 rounded-lg overflow-hidden">
+                <div className="flex mt-8 flex-row items-center px-6 lg:px-12 mb-6">
+                  <h2 className="font-bold text-lg lg:text-xl flex-1">
+                    Aestheti<span className="text-rose-800">CS</span>
+                  </h2>
+                  <div className="ma text-lg lg:text-2xl font-bold">
+                    <h1>
+                      A
+                      <span className="text-purple-800 fo text-xl lg:text-3xl">
+                        g
+                      </span>
+                      iles
+                    </h1>
+                  </div>
+                </div>
+                <figure className="relative group">
+                  <img
+                    src={project_4}
+                    alt="Project"
+                    className="w-full h-[200px] md:h-[300px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300  flex-col pop font-bold ">
+                    <div className="flex justify-between gap-12 flex-row p-8">
+                      <h1 className="flex flex-col flex-1">
+                        Timeline<span className="text-gray-400">8months</span>
+                      </h1>
+                      <p className="flex flex-col">
+                        Technologies
+                        <span className="text-gray-400">
+                          Custom Web application Development for E-commerace
+                          shop
+                        </span>
+                      </p>
+                    </div>
+                    <p className="text-purple-800 text-sm lg:text-base px-8 text-start">
+                      A comprehensive E-commerce project providing agile
+                      solutions for Shopping online.
+                    </p>
+                    <div className="w-full flex justify-start px-8">
+                      <Link
+                        className="btn btn-outline border-purple-800 text-white font-bold pop mt-6 px-8"
+                        to={"/"}
+                      >
+                        Contact Us
+                      </Link>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              {/* card-5 */}
+              <div className="card bg-[#0f041a] shadow-2xl shadow-[#430847] transition-all duration-300 rounded-lg overflow-hidden">
+                <div className="flex mt-8 flex-row items-center px-6 lg:px-12 mb-6">
+                  <h2 className="font-bold text-lg lg:text-xl flex-1">
+                    Penguin<span className="text-sky-400">Cloth</span>
+                  </h2>
+                  <div className="ma text-lg lg:text-2xl font-bold">
+                    <h1>
+                      A
+                      <span className="text-purple-800 fo text-xl lg:text-3xl">
+                        g
+                      </span>
+                      iles
+                    </h1>
+                  </div>
+                </div>
+                <figure className="relative group">
+                  <img
+                    src={project_5}
+                    alt="Project"
+                    className="w-full h-[200px] md:h-[300px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300  flex-col pop font-bold ">
+                    <div className="flex justify-between gap-12 flex-row p-8">
+                      <h1 className="flex flex-col flex-1">
+                        Timeline<span className="text-gray-400">8months</span>
+                      </h1>
+                      <p className="flex flex-col">
+                        Technologies
+                        <span className="text-gray-400">
+                          Custom Web application Development for E-commerace
+                          shop
+                        </span>
+                      </p>
+                    </div>
+                    <p className="text-purple-800 text-sm lg:text-base px-8 text-start">
+                      A comprehensive E-commerce project providing agile
+                      solutions for Shopping online.
+                    </p>
+                    <div className="w-full flex justify-start px-8">
+                      <Link
+                        className="btn btn-outline border-purple-800 text-white font-bold pop mt-6 px-8"
+                        to={"/"}
+                      >
+                        Contact Us
+                      </Link>
+                    </div>
+                  </div>
+                </figure>
+              </div>
 
               {/* Add more cards below if needed */}
             </div>
