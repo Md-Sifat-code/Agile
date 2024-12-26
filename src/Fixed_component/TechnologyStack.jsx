@@ -27,7 +27,7 @@ export default function TechnologyStack() {
           our clients.
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 overflow-hidden">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 overflow-hidden">
           {/* Technologies */}
           {[
             {
@@ -123,8 +123,7 @@ export default function TechnologyStack() {
               name: "Microsoft Azure",
             },
             {
-              image:
-                "https://www.ibm.com/content/dam/adobe-cms/instana/media_logo/Hystrix.component.complex-narrative-xl.ts=1690484720674.png", // Netflix Hystrix
+              image: "https://erkanerkisi.github.io/images/hystrixlogo.jpg", // Netflix Hystrix
               name: "Netflix Hystrix",
             },
             {
@@ -163,7 +162,7 @@ export default function TechnologyStack() {
           ].map((tech, index) => (
             <div
               key={index}
-              className="flex flex-col items-center space-y-2 p-4 rounded-lg bg-[#0f041a] hover:scale-105 transform transition-all duration-300 overflow-hidden"
+              className="flex flex-col items-center space-y-2 p-4 rounded-lg bg-[#0f041a] shadow-md shadow-purple-800  hover:scale-105 transform transition-all duration-300 overflow-hidden mb-2"
             >
               {tech.image ? (
                 <img

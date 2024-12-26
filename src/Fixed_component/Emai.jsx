@@ -98,13 +98,13 @@ const Emai = () => {
   const renderInput = (label, name, placeholder, type = "text") => (
     <div className="form-control">
       <label className="label">
-        <span className="label-text font-bold">{label}</span>
+        <span className="label-text font-bold text-white">{label}</span>
       </label>
       <input
         type={type}
         name={name}
         placeholder={placeholder}
-        className="input input-bordered"
+        className="input input-bordered text-black bg-white"
         value={formik.values[name]}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
@@ -118,7 +118,7 @@ const Emai = () => {
   return (
     <section
       id="contact"
-      className="bg-[#08020e] text-gray-300 py-12 px-4 sm:px-8 lg:px-16"
+      className="bg-[#08020e] text-white py-12 px-4 sm:px-8 lg:px-16"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-12">
         <div className="flex flex-col justify-center items-center text-center">
@@ -151,12 +151,12 @@ const Emai = () => {
               )}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid  grid-cols-1 md:grid-cols-2 gap-6">
               {renderInput("Phone Number", "phone", "Enter your phone number")}
               <div>
                 <label
                   htmlFor="service"
-                  className="block text-xs sm:text-sm font-medium mb-2"
+                  className="block text-xs sm:text-sm font-medium mb-2 text-white"
                 >
                   Services You Want
                 </label>
@@ -190,7 +190,7 @@ const Emai = () => {
                 id="messageContent"
                 name="messageContent"
                 placeholder="Briefly describe your requirements"
-                className="w-full bg-[#2b2f33] text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-800"
+                className="w-full bg-white text-black p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-800"
                 rows="10"
                 value={formik.values.messageContent}
                 onChange={formik.handleChange}

@@ -1,6 +1,6 @@
 import React from "react";
 import frontend from "/s-1.png";
-import backend from "/s-2.png";
+import backend from "/s-2.jpg";
 
 export default function AboutUs() {
   return (
