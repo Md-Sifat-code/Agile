@@ -65,10 +65,10 @@ export default function Projects() {
               {/* Card-1 */}
               <div className="card bg-[#0f041a] shadow-2xl shadow-[#430847] transition-all duration-300 rounded-lg overflow-hidden">
                 <div className="flex mt-8 flex-row items-center px-6 lg:px-12 mb-6">
-                  <h2 className="font-bold text-lg lg:text-xl flex-1">
+                  <h2 className="font-bold text-lg lg:text-2xl flex-1">
                     Medi<span className="text-pink-500">C</span>
                   </h2>
-                  <div className="ma text-lg lg:text-2xl font-bold">
+                  {/* <div className="ma text-lg lg:text-2xl font-bold">
                     <h1>
                       A
                       <span className="fo text-purple-800 text-xl lg:text-3xl">
@@ -76,13 +76,13 @@ export default function Projects() {
                       </span>
                       iles
                     </h1>
-                  </div>
+                  </div> */}
                 </div>
                 <figure className="relative group">
                   <img
                     src={project_1}
                     alt="Project"
-                    className="w-full h-[200px] md:h-[300px] object-cover"
+                    className="w-full p-4 lg:p-12 h-[200px] md:h-[300px] object-cover"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300  flex-col pop font-bold ">
                     <div className="flex justify-between gap-12 flex-row p-8">
@@ -114,10 +114,10 @@ export default function Projects() {
               {/* card-2 */}
               <div className="card bg-[#0f041a] shadow-2xl shadow-[#430847] transition-all duration-300 rounded-lg overflow-hidden">
                 <div className="flex mt-8 flex-row items-center px-6 lg:px-12 mb-6">
-                  <h2 className="font-bold text-lg lg:text-xl flex-1">
+                  <h2 className="font-bold text-lg lg:text-2xl flex-1">
                     Career<span className="text-blue-400">HUB</span>
                   </h2>
-                  <div className="ma text-lg lg:text-2xl font-bold">
+                  {/* <div className="ma text-lg lg:text-2xl font-bold">
                     <h1>
                       A
                       <span className="text-purple-800 fo text-xl lg:text-3xl">
@@ -125,13 +125,13 @@ export default function Projects() {
                       </span>
                       iles
                     </h1>
-                  </div>
+                  </div> */}
                 </div>
                 <figure className="relative group">
                   <img
                     src={project_2}
                     alt="Project"
-                    className="w-full h-[200px] md:h-[300px] object-cover"
+                    className="w-full p-4 lg:p-12 h-[200px] md:h-[300px] object-cover"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300  flex-col pop font-bold ">
                     <div className="flex justify-between gap-12 flex-row p-8">
@@ -164,10 +164,10 @@ export default function Projects() {
               {/* card-3 */}
               <div className="card bg-[#0f041a] shadow-2xl shadow-[#430847] transition-all duration-300 rounded-lg overflow-hidden">
                 <div className="flex mt-8 flex-row items-center px-6 lg:px-12 mb-6">
-                  <h2 className="font-bold text-lg lg:text-xl flex-1">
+                  <h2 className="font-bold text-lg lg:text-2xl flex-1">
                     Travel<span className="text-orange-500">Deabel</span>
                   </h2>
-                  <div className="ma text-lg lg:text-2xl font-bold">
+                  {/* <div className="ma text-lg lg:text-2xl font-bold">
                     <h1>
                       A
                       <span className="text-purple-800 fo text-xl lg:text-3xl">
@@ -175,13 +175,13 @@ export default function Projects() {
                       </span>
                       iles
                     </h1>
-                  </div>
+                  </div> */}
                 </div>
                 <figure className="relative group">
                   <img
                     src={project_3}
                     alt="Project"
-                    className="w-full h-[200px] md:h-[300px] object-cover"
+                    className="w-full p-4 lg:p-12 h-[200px] md:h-[300px] object-cover"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300  flex-col pop font-bold ">
                     <div className="flex justify-between gap-12 flex-row p-8">
@@ -213,10 +213,10 @@ export default function Projects() {
               {/* card-4 */}
               <div className="card bg-[#0f041a] shadow-2xl shadow-[#430847] transition-all duration-300 rounded-lg overflow-hidden">
                 <div className="flex mt-8 flex-row items-center px-6 lg:px-12 mb-6">
-                  <h2 className="font-bold text-lg lg:text-xl flex-1">
+                  <h2 className="font-bold text-lg lg:text-2xl flex-1">
                     Aestheti<span className="text-rose-800">CS</span>
                   </h2>
-                  <div className="ma text-lg lg:text-2xl font-bold">
+                  {/* <div className="ma text-lg lg:text-2xl font-bold">
                     <h1>
                       A
                       <span className="text-purple-800 fo text-xl lg:text-3xl">
@@ -224,13 +224,13 @@ export default function Projects() {
                       </span>
                       iles
                     </h1>
-                  </div>
+                  </div> */}
                 </div>
                 <figure className="relative group">
                   <img
                     src={project_4}
                     alt="Project"
-                    className="w-full h-[200px] md:h-[300px] object-cover"
+                    className="w-full p-4 lg:p-12 h-[200px] md:h-[300px] object-cover"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300  flex-col pop font-bold ">
                     <div className="flex justify-between gap-12 flex-row p-8">
@@ -263,10 +263,10 @@ export default function Projects() {
               {/* card-5 */}
               <div className="card bg-[#0f041a] shadow-2xl shadow-[#430847] transition-all duration-300 rounded-lg overflow-hidden">
                 <div className="flex mt-8 flex-row items-center px-6 lg:px-12 mb-6">
-                  <h2 className="font-bold text-lg lg:text-xl flex-1">
+                  <h2 className="font-bold text-lg lg:text-2xl flex-1">
                     Penguin<span className="text-sky-400">Cloth</span>
                   </h2>
-                  <div className="ma text-lg lg:text-2xl font-bold">
+                  {/* <div className="ma text-lg lg:text-2xl font-bold">
                     <h1>
                       A
                       <span className="text-purple-800 fo text-xl lg:text-3xl">
@@ -274,13 +274,13 @@ export default function Projects() {
                       </span>
                       iles
                     </h1>
-                  </div>
+                  </div> */}
                 </div>
                 <figure className="relative group">
                   <img
                     src={project_5}
                     alt="Project"
-                    className="w-full h-[200px] md:h-[300px] object-cover"
+                    className="w-full p-4 lg:p-12 h-[200px] md:h-[300px] object-cover"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300  flex-col pop font-bold ">
                     <div className="flex justify-between gap-12 flex-row p-8">
