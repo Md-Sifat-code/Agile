@@ -285,7 +285,7 @@ export default function Projects() {
                   <div className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300  flex-col pop font-bold ">
                     <div className="flex justify-between gap-12 flex-row p-8">
                       <h1 className="flex flex-col flex-1">
-                        Timeline<span className="text-gray-400">8months</span>
+                        Timeline<span className="text-gray-400">4months</span>
                       </h1>
                       <p className="flex flex-col">
                         Technologies
