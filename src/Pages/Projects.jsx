@@ -1,15 +1,17 @@
 import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { ImFire } from "react-icons/im";
 import pro from "/proje.png";
 import project_1 from "/project-1.png";
 import project_2 from "/project-2.png";
 import project_3 from "/project-3.png";
 import project_4 from "/project-4.png";
 import project_5 from "/project-5.png";
+import rock from "/rocket-1.png";
 export default function Projects() {
   return (
-    <section className="h-auto bg-[#08020e] text-white overflow-x-hidden">
+    <section className="h-auto bg-[#08020e] mb-12 text-white overflow-x-hidden">
       <div className="container mx-auto px-4">
         {/* Navigation Breadcrumb */}
         <div className="flex justify-center items-center">
@@ -59,7 +61,7 @@ export default function Projects() {
         {/* Cards Section */}
         <div className="flex justify-center items-center mt-20">
           <div className="w-full lg:w-[70%]">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Card-1 */}
               <div className="card bg-[#0f041a] shadow-2xl shadow-[#430847] transition-all duration-300 rounded-lg overflow-hidden">
                 <div className="flex mt-8 flex-row items-center px-6 lg:px-12 mb-6">
@@ -310,6 +312,35 @@ export default function Projects() {
               </div>
 
               {/* Add more cards below if needed */}
+            </div>
+          </div>
+        </div>
+        {/* another */}
+        <div className="flex justify-center items-center mt-24 mb-24">
+          <div className=" bg-[#0f041a] w-full lg:w-[70%] grid grid-cols-1 lg:grid-cols-2 border border-orange-200 rounded-[42px] shadow-2xl shadow-[#430847] ">
+            <div className="p-12 lg:p-20 flex flex-col gap-4 lg:gap-8 justify-center items-center lg:items-start">
+              <h1 className="uppercase ma text-6xl font-thin text-center lg:text-start  ">
+                <ImFire className="text-orange-400 font-bold text-2xl lg:text-4xl inline-block" />{" "}
+                Create you custom <br></br>project
+              </h1>
+              <p className="text-white font-normal pop text-center lg:text-start">
+                Let’s start to work together on advanced solutions for your
+                business
+              </p>
+              <Link
+                to={"/"}
+                className="btn btn-outline px-8 border-purple-800 font-bold text-white mt-4 hover:bg-purple-800"
+              >
+                Contact Us
+              </Link>
+            </div>
+            {/* pic */}
+            <div className="flex px-6 lg:px-0 justify-center items-center">
+              <img
+                className="w-[250px] h-[250px] lg:w-[350px] lg:h-[350px]"
+                src={rock}
+                alt=""
+              />
             </div>
           </div>
         </div>

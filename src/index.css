@@ -43,3 +43,6 @@ html {
 .lav {
   font-family: "Lavishly Yours", serif;
 }
+html {
+  scroll-behavior: smooth;
+}
