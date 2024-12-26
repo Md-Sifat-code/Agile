@@ -1,33 +1,119 @@
 import React, { useState } from "react";
+import { useFormik } from "formik";
+import axios from "axios";
+import * as yup from "yup";
+import swal from "sweetalert";
 
-export default function Emai() {
-  const [formData, setFormData] = useState({
-    email: "",
-    address: "",
-    phone: "",
-    service: "",
-    freeTime: "",
-    description: "",
+// Validation schema using Yup
+const Emai = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const validationSchema = yup.object({
+    mailAddress: yup
+      .string()
+      .email("Invalid email address")
+      .required("Email is required"),
+    location: yup.string().required("Location is required"),
+    phone: yup.string().required("Phone number is required"),
+    service: yup.string().required("Service is required"),
+    clientPreferredTime: yup.string().required("Preferred time is required"),
+    name: yup.string().required("Name is required"),
+    messageContent: yup.string().required("Message content is required"),
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you for reaching out! We'll get back to you soon.");
-    setFormData({
-      email: "",
-      address: "",
+  // Formik Configuration
+  const formik = useFormik({
+    initialValues: {
+      mailAddress: "",
+      location: "",
       phone: "",
       service: "",
-      freeTime: "",
-      description: "",
-    });
-  };
+      clientPreferredTime: "",
+      name: "",
+      messageContent: "",
+    },
+    validationSchema,
+    onSubmit: async (values) => {
+      setIsLoading(true);
+      try {
+        // Logging the payload for debugging
+        console.log({
+          mailAddress: values.mailAddress,
+          location: values.location,
+          phone: values.phone,
+          service: values.service,
+          clientPreferredTime: values.clientPreferredTime,
+          name: values.name,
+          messageContent: values.messageContent,
+        });
+
+        // API Request with headers
+        const response = await axios.post(
+          "https://agile-x3ly.onrender.com/email/send",
+          {
+            mailAddress: values.mailAddress,
+            location: values.location,
+            phone: values.phone,
+            service: values.service,
+            clientPreferredTime: values.clientPreferredTime,
+            name: values.name,
+            messageContent: values.messageContent,
+          },
+          {
+            headers: {
+              "Content-Type": "application/json", // Ensure correct content type
+            },
+          }
+        );
+        console.log("Response:", response);
+
+        // Success Handling
+        if (
+          response.status === 200 ||
+          response.data.message === "Email sent successfully to string"
+        ) {
+          swal(
+            "Success!",
+            "Thank you for reaching out! We'll get back to you soon.",
+            "success"
+          );
+          formik.resetForm();
+        } else {
+          swal(
+            "Error",
+            "Something went wrong. Please try again later.",
+            "error"
+          );
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+        swal("Error", "Something went wrong. Please try again later.", "error");
+      } finally {
+        setIsLoading(false);
+      }
+    },
+  });
+
+  // Input Render Function
+  const renderInput = (label, name, placeholder, type = "text") => (
+    <div className="form-control">
+      <label className="label">
+        <span className="label-text font-bold">{label}</span>
+      </label>
+      <input
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        className="input input-bordered"
+        value={formik.values[name]}
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+      />
+      {formik.touched[name] && formik.errors[name] && (
+        <p className="text-red-500 text-sm mt-2">{formik.errors[name]}</p>
+      )}
+    </div>
+  );
 
   return (
     <section
@@ -35,7 +121,6 @@ export default function Emai() {
       className="bg-[#08020e] text-gray-300 py-12 px-4 sm:px-8 lg:px-16"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-12">
-        {/* Left Side */}
         <div className="flex flex-col justify-center items-center text-center">
           <h1 className="co text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
             Reach Out with your
@@ -50,70 +135,24 @@ export default function Emai() {
           </p>
         </div>
 
-        {/* Right Side - Form */}
         <div className="bg-[#0f041a] rounded-lg shadow-lg p-4 sm:p-6 lg:p-10">
-          <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-            {/* Email Address and Address Fields */}
+          <form onSubmit={formik.handleSubmit} className="flex flex-col gap-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-xs sm:text-sm font-medium mb-2"
-                >
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Enter your email"
-                  className="w-full bg-[#2b2f33] text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-800"
-                  required
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="address"
-                  className="block text-xs sm:text-sm font-medium mb-2"
-                >
-                  Address
-                </label>
-                <input
-                  type="text"
-                  id="address"
-                  name="address"
-                  value={formData.address}
-                  onChange={handleChange}
-                  placeholder="Enter your address"
-                  className="w-full bg-[#2b2f33] text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-800"
-                />
-              </div>
+              {renderInput("Email Address", "mailAddress", "Enter your email")}
+              {renderInput("Address", "location", "Enter your address")}
             </div>
 
-            {/* Phone Number and Service Fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-xs sm:text-sm font-medium mb-2"
-                >
-                  Phone Number
-                </label>
-                <input
-                  type="text"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="Enter your phone number"
-                  className="w-full bg-[#2b2f33] text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-800"
-                  required
-                />
-              </div>
+              {renderInput("Name", "name", "Enter your name")}
+              {renderInput(
+                "Your Free Time for a Meeting",
+                "clientPreferredTime",
+                "Enter your free time"
+              )}
+            </div>
 
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {renderInput("Phone Number", "phone", "Enter your phone number")}
               <div>
                 <label
                   htmlFor="service"
@@ -124,65 +163,59 @@ export default function Emai() {
                 <select
                   id="service"
                   name="service"
-                  value={formData.service}
-                  onChange={handleChange}
                   className="w-full bg-[#2b2f33] text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-800"
-                  required
+                  value={formik.values.service}
+                  onChange={formik.handleChange}
                 >
                   <option value="">Select a service</option>
                   <option value="Personal Website">Personal Website</option>
                   <option value="Portfolio Website">Portfolio Website</option>
                 </select>
+                {formik.errors.service && formik.touched.service && (
+                  <div className="text-red-500 text-xs mt-2">
+                    {formik.errors.service}
+                  </div>
+                )}
               </div>
             </div>
 
             <div>
               <label
-                htmlFor="freeTime"
-                className="block text-xs sm:text-sm font-medium mb-2"
-              >
-                Your Free Time for a Meeting
-              </label>
-              <input
-                type="text"
-                id="freeTime"
-                name="freeTime"
-                value={formData.freeTime}
-                onChange={handleChange}
-                placeholder="Enter your free time"
-                className="w-full bg-[#2b2f33] text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-800"
-                required
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="description"
+                htmlFor="messageContent"
                 className="block text-xs sm:text-sm font-medium mb-2"
               >
                 Describe What You Want
               </label>
               <textarea
-                id="description"
-                name="description"
-                value={formData.description}
-                onChange={handleChange}
+                id="messageContent"
+                name="messageContent"
                 placeholder="Briefly describe your requirements"
                 className="w-full bg-[#2b2f33] text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-800"
-                rows="4"
-                required
-              ></textarea>
+                rows="10"
+                value={formik.values.messageContent}
+                onChange={formik.handleChange}
+              />
+              {formik.errors.messageContent &&
+                formik.touched.messageContent && (
+                  <div className="text-red-500 text-xs mt-2">
+                    {formik.errors.messageContent}
+                  </div>
+                )}
             </div>
 
-            <button
-              type="submit"
-              className="bg-purple-800 text-white font-medium py-3 rounded-lg hover:bg-purple-900 transition duration-300 text-sm sm:text-base lg:text-lg"
-            >
-              Submit
-            </button>
+            <div>
+              <button
+                type="submit"
+                className="bg-purple-600 hover:bg-purple-800 text-white py-3 px-6 rounded-lg w-full"
+              >
+                Submit
+              </button>
+            </div>
           </form>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Emai;
