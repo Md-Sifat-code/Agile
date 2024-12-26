@@ -31,7 +31,7 @@ export default function AboutUs() {
               Md Sifat Bin Jibon
             </h2>
             <h3 className="text-purple-500 text-lg font-medium mb-4">
-              Co-Owner | Frontend Developer
+              Co-Founder | Frontend Developer
             </h3>
             <p className="text-gray-300 text-sm">
               Sifat, a passionate frontend developer, built the stunning user
@@ -57,7 +57,7 @@ export default function AboutUs() {
               Yeamim Hossain Sajid
             </h2>
             <h3 className="text-purple-500 text-lg font-medium mb-4">
-              Co-Owner | Backend Developer
+              Co-Founder | Backend Developer
             </h3>
             <p className="text-gray-300 text-sm">
               Sajid, the mastermind behind Agiles' backend, developed a robust
