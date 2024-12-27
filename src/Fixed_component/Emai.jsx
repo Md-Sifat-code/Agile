@@ -104,7 +104,7 @@ const Emai = () => {
         type={type}
         name={name}
         placeholder={placeholder}
-        className="input input-bordered text-black bg-[#2b2f33]"
+        className="input input-bordered text-white bg-[#2b2f33]"
         value={formik.values[name]}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
@@ -190,7 +190,7 @@ const Emai = () => {
                 id="messageContent"
                 name="messageContent"
                 placeholder="Briefly describe your requirements"
-                className="w-full bg-[#2b2f33] text-black p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-800"
+                className="w-full bg-[#2b2f33] text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-800"
                 rows="10"
                 value={formik.values.messageContent}
                 onChange={formik.handleChange}
