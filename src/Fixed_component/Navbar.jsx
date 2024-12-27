@@ -1,26 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaArrowUp, FaBars, FaTimes } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   const location = useLocation();
+  const navigate = useNavigate();
+  const [scrollToId, setScrollToId] = useState(null); // Stores the section ID to scroll to
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Helper function to determine active link
+  const isActive = (path) => location.pathname === path;
+
+  // Function to handle scrolling to a section
   const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false); // Close menu on navigation
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  // Helper function to determine active link
-  const isActive = (path) => location.pathname === path;
+  // Handle navigation and scrolling for testimonials
+  const handleTestimonialsClick = () => {
+    if (location.pathname !== "/") {
+      setScrollToId("testimonials"); // Set the target ID
+      navigate("/"); // Navigate to the home page
+    } else {
+      scrollToSection("testimonials");
+    }
+  };
+
+  // Scroll to the section once on "/" route
+  useEffect(() => {
+    if (location.pathname === "/" && scrollToId) {
+      scrollToSection(scrollToId);
+      setScrollToId(null); // Reset the target ID
+    }
+  }, [location.pathname, scrollToId]);
 
   return (
     <section className="bg-[#04030c]">
@@ -60,24 +79,26 @@ export default function Navbar() {
             Projects
           </Link>
           <button
-            onClick={() => scrollToSection("testimonials")}
+            onClick={handleTestimonialsClick}
             className="text-white relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
           >
             Testimonials
           </button>
-          <button
-            onClick={() => scrollToSection("contact")}
-            className="text-white relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
+          <Link
+            to="/contact"
+            className={`text-white relative border-b-2 py-2 ${
+              isActive("/contact") ? "border-purple-800" : "border-transparent"
+            } hover:border-purple-800 transition-all`}
           >
             Contact
-          </button>
-          <button
-            onClick={() => scrollToSection("contact")}
+          </Link>
+          <Link
+            to="/contact"
             className="btn px-6 text-white border-2 border-transparent bg-transparent gradient-border hover:bg-gradient-to-b from-purple-400 to-purple-900 hover:border-black hover:rounded-none"
           >
             Book a Call
             <FaArrowUp className="ml-2 transform rotate-45" />
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Icon */}
@@ -131,24 +152,31 @@ export default function Navbar() {
             Projects
           </Link>
           <button
-            onClick={() => scrollToSection("testimonials")}
+            onClick={() => {
+              handleTestimonialsClick();
+              setIsMobileMenuOpen(false);
+            }}
             className="text-white text-lg relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
           >
             Testimonials
           </button>
-          <button
-            onClick={() => scrollToSection("contact")}
-            className="text-white text-lg relative border-b-2 py-2 border-transparent hover:border-purple-800 transition-all"
+          <Link
+            to="/contact"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`text-white text-lg relative border-b-2 py-2 ${
+              isActive("/contact") ? "border-purple-800" : "border-transparent"
+            } hover:border-purple-800 transition-all`}
           >
             Contact
-          </button>
-          <button
-            onClick={() => scrollToSection("contact")}
+          </Link>
+          <Link
+            to="/contact"
+            onClick={() => setIsMobileMenuOpen(false)}
             className="btn px-6 text-white border-2 border-transparent bg-transparent gradient-border hover:bg-gradient-to-b from-purple-400 to-purple-900 hover:border-black hover:rounded-none"
           >
             Book a Call
             <FaArrowUp className="ml-2 transform rotate-45" />
-          </button>
+          </Link>
         </div>
       )}
     </section>
