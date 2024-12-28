@@ -1,21 +1,20 @@
 import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { ImFire } from "react-icons/im";
 import pro from "/proje.png";
 import project_1 from "/project-1.png";
 import project_2 from "/project-2.png";
 import project_3 from "/project-3.png";
 import project_4 from "/project-4.png";
 import project_5 from "/project-5.png";
-import rock from "/rocket-1.png";
+
 export default function Projects() {
   return (
-    <section className="h-auto bg-[#08020e] mb-12 text-white overflow-x-hidden">
+    <section className="h-auto bg-[#08020e] mb-12 text-white overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Navigation Breadcrumb */}
         <div className="flex justify-center items-center">
-          <div className="w-full  mt-12">
+          <div className="w-full mt-12">
             <h1 className="text-white font-normal flex flex-row justify-start items-center text-sm lg:text-lg">
               <Link to={"/"}>Home</Link>{" "}
               <IoIosArrowRoundForward className="inline-block text-lg lg:text-xl" />{" "}
@@ -28,7 +27,7 @@ export default function Projects() {
 
         {/* Title and Description */}
         <div className="flex justify-center items-center mt-6">
-          <div className="w-full ">
+          <div className="w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Left Side: Title and Description */}
               <div className="flex flex-col justify-center items-start gap-6">
@@ -49,7 +48,7 @@ export default function Projects() {
               {/* Right Side: Image */}
               <div className="flex justify-center lg:justify-center items-center">
                 <img
-                  className="w-[150px] h-[150px] lg:w-[350px] lg:h-[350px]"
+                  className="w-[150px] h-[150px] lg:w-[350px] lg:h-[350px] object-cover"
                   src={pro}
                   alt="Project"
                 />
@@ -60,249 +59,35 @@ export default function Projects() {
 
         {/* Cards Section */}
         <div className="flex justify-center items-center mt-28">
-          <div className="w-full ">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              {/* Card-1 */}
-              <div className="card bg-[#0f041a] shadow-2xl shadow-[#430847] transition-all duration-300 rounded-lg overflow-hidden">
-                <div className="flex mt-8 flex-row items-center px-6 lg:px-12 mb-6">
+          <div className="w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+              {/* Card 1 */}
+              <div className="bg-[#1e1e2f] shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden">
+                <div className="flex flex-row items-center px-6 py-4">
                   <h2 className="font-bold text-lg lg:text-2xl flex-1">
                     Medi<span className="text-pink-500">C</span>
                   </h2>
-                  {/* <div className="ma text-lg lg:text-2xl font-bold">
-                    <h1>
-                      A
-                      <span className="fo text-purple-800 text-xl lg:text-3xl">
-                        g
-                      </span>
-                      iles
-                    </h1>
-                  </div> */}
                 </div>
-                <figure className="relative group">
+                <figure className="relative">
                   <img
                     src={project_1}
                     alt="Project"
-                    className="w-full p-4 lg:p-12 h-[200px] md:h-[300px] object-cover"
+                    className="w-full h-[250px] object-cover"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300  flex-col pop font-bold ">
-                    <div className="flex justify-between gap-12 flex-row p-8">
-                      <h1 className="flex flex-col flex-1">
-                        Timeline<span className="text-gray-400">7months</span>
-                      </h1>
-                      <p className="flex flex-col">
-                        Technologies
-                        <span className="text-gray-400">
-                          Custom Web application Development for Hospital
-                        </span>
+                  <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 text-center">
+                    <div className="text-white p-6">
+                      <h3 className="text-lg font-semibold">Timeline</h3>
+                      <p className="text-sm text-gray-400">7 months</p>
+                      <p className="text-sm text-gray-400 mt-2">
+                        Custom Web application Development for Hospital
                       </p>
-                    </div>
-                    <p className="text-purple-800 text-sm lg:text-base px-8 text-start">
-                      A comprehensive medical management project providing agile
-                      solutions for healthcare businesses.
-                    </p>
-                    <div className="w-full flex justify-start px-8">
-                      <Link
-                        className="btn btn-outline border-purple-800 text-white font-bold pop mt-6 px-8"
-                        to={"/"}
-                      >
-                        Contact Us
-                      </Link>
-                    </div>
-                  </div>
-                </figure>
-              </div>
-              {/* card-2 */}
-              <div className="card bg-[#0f041a] shadow-2xl shadow-[#430847] transition-all duration-300 rounded-lg overflow-hidden">
-                <div className="flex mt-8 flex-row items-center px-6 lg:px-12 mb-6">
-                  <h2 className="font-bold text-lg lg:text-2xl flex-1">
-                    Career<span className="text-blue-400">HUB</span>
-                  </h2>
-                  {/* <div className="ma text-lg lg:text-2xl font-bold">
-                    <h1>
-                      A
-                      <span className="text-purple-800 fo text-xl lg:text-3xl">
-                        g
-                      </span>
-                      iles
-                    </h1>
-                  </div> */}
-                </div>
-                <figure className="relative group">
-                  <img
-                    src={project_2}
-                    alt="Project"
-                    className="w-full p-4 lg:p-12 h-[200px] md:h-[300px] object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300  flex-col pop font-bold ">
-                    <div className="flex justify-between gap-12 flex-row p-8">
-                      <h1 className="flex flex-col flex-1">
-                        Timeline<span className="text-gray-400">3months</span>
-                      </h1>
-                      <p className="flex flex-col">
-                        Technologies
-                        <span className="text-gray-400">
-                          Custom Web application Development for Career
-                          Consaltation
-                        </span>
+                      <p className="mt-4 text-sm">
+                        A comprehensive medical management project providing
+                        agile solutions for healthcare businesses.
                       </p>
-                    </div>
-                    <p className="text-purple-800 text-sm lg:text-base px-8 text-start">
-                      A comprehensive Career Cosaltation project providing agile
-                      solutions for Career Guide.
-                    </p>
-                    <div className="w-full flex justify-start px-8">
                       <Link
-                        className="btn btn-outline border-purple-800 text-white font-bold pop mt-6 px-8"
                         to={"/"}
-                      >
-                        Contact Us
-                      </Link>
-                    </div>
-                  </div>
-                </figure>
-              </div>
-              {/* card-3 */}
-              <div className="card bg-[#0f041a] shadow-2xl shadow-[#430847] transition-all duration-300 rounded-lg overflow-hidden">
-                <div className="flex mt-8 flex-row items-center px-6 lg:px-12 mb-6">
-                  <h2 className="font-bold text-lg lg:text-2xl flex-1">
-                    Travel<span className="text-orange-500">Deabel</span>
-                  </h2>
-                  {/* <div className="ma text-lg lg:text-2xl font-bold">
-                    <h1>
-                      A
-                      <span className="text-purple-800 fo text-xl lg:text-3xl">
-                        g
-                      </span>
-                      iles
-                    </h1>
-                  </div> */}
-                </div>
-                <figure className="relative group">
-                  <img
-                    src={project_3}
-                    alt="Project"
-                    className="w-full p-4 lg:p-12 h-[200px] md:h-[300px] object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300  flex-col pop font-bold ">
-                    <div className="flex justify-between gap-12 flex-row p-8">
-                      <h1 className="flex flex-col flex-1">
-                        Timeline<span className="text-gray-400">3months</span>
-                      </h1>
-                      <p className="flex flex-col">
-                        Technologies
-                        <span className="text-gray-400">
-                          Custom Web application Development for Travel Guide
-                        </span>
-                      </p>
-                    </div>
-                    <p className="text-purple-800 text-sm lg:text-base px-8 text-start">
-                      A comprehensive travel Guidance project providing agile
-                      solutions for Travel Guide.
-                    </p>
-                    <div className="w-full flex justify-start px-8">
-                      <Link
-                        className="btn btn-outline border-purple-800 text-white font-bold pop mt-6 px-8"
-                        to={"/"}
-                      >
-                        Contact Us
-                      </Link>
-                    </div>
-                  </div>
-                </figure>
-              </div>
-              {/* card-4 */}
-              <div className="card bg-[#0f041a] shadow-2xl shadow-[#430847] transition-all duration-300 rounded-lg overflow-hidden">
-                <div className="flex mt-8 flex-row items-center px-6 lg:px-12 mb-6">
-                  <h2 className="font-bold text-lg lg:text-2xl flex-1">
-                    Aestheti<span className="text-rose-800">CS</span>
-                  </h2>
-                  {/* <div className="ma text-lg lg:text-2xl font-bold">
-                    <h1>
-                      A
-                      <span className="text-purple-800 fo text-xl lg:text-3xl">
-                        g
-                      </span>
-                      iles
-                    </h1>
-                  </div> */}
-                </div>
-                <figure className="relative group">
-                  <img
-                    src={project_4}
-                    alt="Project"
-                    className="w-full p-4 lg:p-12 h-[200px] md:h-[300px] object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300  flex-col pop font-bold ">
-                    <div className="flex justify-between gap-12 flex-row p-8">
-                      <h1 className="flex flex-col flex-1">
-                        Timeline<span className="text-gray-400">8months</span>
-                      </h1>
-                      <p className="flex flex-col">
-                        Technologies
-                        <span className="text-gray-400">
-                          Custom Web application Development for E-commerace
-                          shop
-                        </span>
-                      </p>
-                    </div>
-                    <p className="text-purple-800 text-sm lg:text-base px-8 text-start">
-                      A comprehensive E-commerce project providing agile
-                      solutions for Shopping online.
-                    </p>
-                    <div className="w-full flex justify-start px-8">
-                      <Link
-                        className="btn btn-outline border-purple-800 text-white font-bold pop mt-6 px-8"
-                        to={"/"}
-                      >
-                        Contact Us
-                      </Link>
-                    </div>
-                  </div>
-                </figure>
-              </div>
-              {/* card-5 */}
-              <div className="card bg-[#0f041a] shadow-2xl shadow-[#430847] transition-all duration-300 rounded-lg overflow-hidden">
-                <div className="flex mt-8 flex-row items-center px-6 lg:px-12 mb-6">
-                  <h2 className="font-bold text-lg lg:text-2xl flex-1">
-                    Penguin<span className="text-sky-400">Cloth</span>
-                  </h2>
-                  {/* <div className="ma text-lg lg:text-2xl font-bold">
-                    <h1>
-                      A
-                      <span className="text-purple-800 fo text-xl lg:text-3xl">
-                        g
-                      </span>
-                      iles
-                    </h1>
-                  </div> */}
-                </div>
-                <figure className="relative group">
-                  <img
-                    src={project_5}
-                    alt="Project"
-                    className="w-full p-4 lg:p-12 h-[200px] md:h-[300px] object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300  flex-col pop font-bold ">
-                    <div className="flex justify-between gap-12 flex-row p-8">
-                      <h1 className="flex flex-col flex-1">
-                        Timeline<span className="text-gray-400">4months</span>
-                      </h1>
-                      <p className="flex flex-col">
-                        Technologies
-                        <span className="text-gray-400">
-                          Custom Web application Development for E-commerace
-                          shop
-                        </span>
-                      </p>
-                    </div>
-                    <p className="text-purple-800 text-sm lg:text-base px-8 text-start">
-                      A comprehensive E-commerce project providing agile
-                      solutions for Shopping online.
-                    </p>
-                    <div className="w-full flex justify-start px-8">
-                      <Link
-                        className="btn btn-outline border-purple-800 text-white font-bold pop mt-6 px-8"
-                        to={"/"}
+                        className="mt-6 inline-block text-white bg-purple-600 px-6 py-2 rounded-md font-semibold hover:bg-purple-700 transition-all"
                       >
                         Contact Us
                       </Link>
@@ -311,36 +96,146 @@ export default function Projects() {
                 </figure>
               </div>
 
-              {/* Add more cards below if needed */}
-            </div>
-          </div>
-        </div>
-        {/* another */}
-        <div className="flex justify-center items-center mt-24 mb-24">
-          <div className=" bg-[#0f041a] w-full lg:w-[70%] grid grid-cols-1 lg:grid-cols-2 border border-orange-200 rounded-[42px] shadow-2xl shadow-[#430847] ">
-            <div className="p-12 lg:p-20 flex flex-col gap-4 lg:gap-8 justify-center items-center lg:items-start">
-              <h1 className="uppercase ma text-6xl font-thin text-center lg:text-start  ">
-                <ImFire className="text-orange-400 font-bold text-2xl lg:text-4xl inline-block" />{" "}
-                Create you custom <br></br>project
-              </h1>
-              <p className="text-white font-normal pop text-center lg:text-start">
-                Let’s start to work together on advanced solutions for your
-                business
-              </p>
-              <Link
-                to={"/"}
-                className="btn btn-outline px-8 border-purple-800 font-bold text-white mt-4 hover:bg-purple-800"
-              >
-                Contact Us
-              </Link>
-            </div>
-            {/* pic */}
-            <div className="flex px-6 lg:px-0 justify-center items-center">
-              <img
-                className="w-[250px] h-[250px] lg:w-[350px] lg:h-[350px]"
-                src={rock}
-                alt=""
-              />
+              {/* Card 2 */}
+              <div className="bg-[#1e1e2f] shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden">
+                <div className="flex flex-row items-center px-6 py-4">
+                  <h2 className="font-bold text-lg lg:text-2xl flex-1">
+                    Career<span className="text-blue-400">HUB</span>
+                  </h2>
+                </div>
+                <figure className="relative">
+                  <img
+                    src={project_2}
+                    alt="Project"
+                    className="w-full h-[250px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 text-center">
+                    <div className="text-white p-6">
+                      <h3 className="text-lg font-semibold">Timeline</h3>
+                      <p className="text-sm text-gray-400">3 months</p>
+                      <p className="text-sm text-gray-400 mt-2">
+                        Custom Web application Development for Career
+                        Consultation
+                      </p>
+                      <p className="mt-4 text-sm">
+                        A comprehensive career consultation project providing
+                        agile solutions for career guidance.
+                      </p>
+                      <Link
+                        to={"/"}
+                        className="mt-6 inline-block text-white bg-blue-600 px-6 py-2 rounded-md font-semibold hover:bg-blue-700 transition-all"
+                      >
+                        Contact Us
+                      </Link>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-[#1e1e2f] shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden">
+                <div className="flex flex-row items-center px-6 py-4">
+                  <h2 className="font-bold text-lg lg:text-2xl flex-1">
+                    Travel<span className="text-orange-500">Deabel</span>
+                  </h2>
+                </div>
+                <figure className="relative">
+                  <img
+                    src={project_3}
+                    alt="Project"
+                    className="w-full h-[250px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 text-center">
+                    <div className="text-white p-6">
+                      <h3 className="text-lg font-semibold">Timeline</h3>
+                      <p className="text-sm text-gray-400">3 months</p>
+                      <p className="text-sm text-gray-400 mt-2">
+                        Custom Web application Development for Travel Guide
+                      </p>
+                      <p className="mt-4 text-sm">
+                        A comprehensive travel guidance project providing agile
+                        solutions for travel guides.
+                      </p>
+                      <Link
+                        to={"/"}
+                        className="mt-6 inline-block text-white bg-orange-500 px-6 py-2 rounded-md font-semibold hover:bg-orange-600 transition-all"
+                      >
+                        Contact Us
+                      </Link>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+
+              {/* Card 4 */}
+              <div className="bg-[#1e1e2f] shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden">
+                <div className="flex flex-row items-center px-6 py-4">
+                  <h2 className="font-bold text-lg lg:text-2xl flex-1">
+                    Aestheti<span className="text-rose-800">CS</span>
+                  </h2>
+                </div>
+                <figure className="relative">
+                  <img
+                    src={project_4}
+                    alt="Project"
+                    className="w-full h-[250px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 text-center">
+                    <div className="text-white p-6">
+                      <h3 className="text-lg font-semibold">Timeline</h3>
+                      <p className="text-sm text-gray-400">1 month</p>
+                      <p className="text-sm text-gray-400 mt-2">
+                        Custom Web application Development for Beauty Services
+                      </p>
+                      <p className="mt-4 text-sm">
+                        A beauty services application connecting customers and
+                        professionals through an innovative platform.
+                      </p>
+                      <Link
+                        to={"/"}
+                        className="mt-6 inline-block text-white bg-rose-600 px-6 py-2 rounded-md font-semibold hover:bg-rose-700 transition-all"
+                      >
+                        Contact Us
+                      </Link>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+
+              {/* Card 5 */}
+              <div className="bg-[#1e1e2f] shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden">
+                <div className="flex flex-row items-center px-6 py-4">
+                  <h2 className="font-bold text-lg lg:text-2xl flex-1">
+                    Rent<span className="text-yellow-500">Zen</span>
+                  </h2>
+                </div>
+                <figure className="relative">
+                  <img
+                    src={project_5}
+                    alt="Project"
+                    className="w-full h-[250px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 text-center">
+                    <div className="text-white p-6">
+                      <h3 className="text-lg font-semibold">Timeline</h3>
+                      <p className="text-sm text-gray-400">5 months</p>
+                      <p className="text-sm text-gray-400 mt-2">
+                        Custom Web application Development for Rental Services
+                      </p>
+                      <p className="mt-4 text-sm">
+                        A rental platform helping users rent items effortlessly
+                        for short periods.
+                      </p>
+                      <Link
+                        to={"/"}
+                        className="mt-6 inline-block text-white bg-yellow-500 px-6 py-2 rounded-md font-semibold hover:bg-yellow-600 transition-all"
+                      >
+                        Contact Us
+                      </Link>
+                    </div>
+                  </div>
+                </figure>
+              </div>
             </div>
           </div>
         </div>
