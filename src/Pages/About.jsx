@@ -57,19 +57,19 @@ export default function About() {
             <div className="flex gap-4 flex-col justify-center items-center mt-6">
               <p className="text-white text-sm md:text-base">Projects</p>
               <h1 className="text-white text-4xl font-bold">
-                <CountUp end={20} duration={2} /> {/* Projects count */}
+                <CountUp end={20} duration={5} /> {/* Projects count */}
               </h1>
             </div>
             <div className="flex flex-col gap-4 justify-center items-center mt-6">
               <p className="text-white text-lg md:text-base">Users</p>
               <h1 className="text-purple-800 text-4xl font-bold">
-                <CountUp end={50} duration={2} />+{/* Projects count */}
+                <CountUp end={50} duration={5} />+{/* Projects count */}
               </h1>
             </div>
             <div className="flex flex-col gap-4 justify-center items-center mt-6">
               <p className="text-white text-sm md:text-base">Rating</p>
               <h1 className="text-white text-4xl flex  gap-2 font-bold">
-                <CountUp end={5} duration={2} />
+                <CountUp end={5} duration={5} />
                 <FaStar className="text-purple-800 text-[24px]" />{" "}
                 {/* Projects count */}
               </h1>

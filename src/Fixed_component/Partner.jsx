@@ -60,7 +60,10 @@ export default function Partner() {
               and enterprises trust us for impactful results.
             </p>
             <div className="flex justify-end">
-              <Link className="btn btn-outline border-purple-800 text-white">
+              <Link
+                to={"/contact"}
+                className="btn btn-outline border-purple-800 text-white"
+              >
                 Book a Call <FaArrowUp className="text-white rotate-45" />
               </Link>
             </div>
@@ -87,7 +90,10 @@ export default function Partner() {
               projects, whether you are a startup or a large business.
             </p>
             <div className="flex justify-end">
-              <Link className="btn btn-outline border-purple-800 text-white">
+              <Link
+                to={"/contact"}
+                className="btn btn-outline border-purple-800 text-white"
+              >
                 Book a Call <FaArrowUp className="text-white rotate-45" />
               </Link>
             </div>
@@ -113,7 +119,10 @@ export default function Partner() {
               needs, and we'll recommend AI options to make it more competitive.
             </p>
             <div className="flex justify-end">
-              <Link className="btn btn-outline border-purple-800 text-white">
+              <Link
+                to={"/contact"}
+                className="btn btn-outline border-purple-800 text-white"
+              >
                 Book a Call <FaArrowUp className="text-white rotate-45" />
               </Link>
             </div>
