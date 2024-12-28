@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 export default function Footer() {
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState({ title: "", content: "" });
@@ -54,9 +54,9 @@ export default function Footer() {
   };
 
   return (
-    <section className="bg-[#08020e]">
+    <section className="bg-[#08020e] text-white">
       {/* Footer */}
-      <footer className="footer container mx-auto flex flex-col lg:flex-row justify-around items-start lg:items-center mt-12 text-base-content p-10">
+      <footer className="footer container mx-auto flex flex-col lg:flex-row justify-around items-start lg:items-center mt-12 p-10">
         {/* Company Section */}
         <aside className="flex flex-col gap-4">
           <div className="text-4xl text-white ma font-bold">
@@ -73,7 +73,7 @@ export default function Footer() {
 
         {/* Navigation Links */}
         <nav className="text-white">
-          <h6 className="footer-title">Quick Links</h6>
+          <h6 className="footer-title mb-4">Quick Links</h6>
           <a
             onClick={() => scrollToSection("home")}
             className="link link-hover"
@@ -100,39 +100,87 @@ export default function Footer() {
           </a>
         </nav>
 
-        {/* Legal Section */}
-        <nav className="text-white">
-          <h6 className="footer-title">Legal</h6>
+        <div className="text-white flex flex-col">
+          <h6 className="footer-title flex-1 mb-4">Legal</h6>
+          <div className="flex flex-col gap-5">
+            <a
+              onClick={() => openModal("Terms of Use", policyContent.terms)}
+              className="link link-hover"
+            >
+              Terms of Use
+            </a>
+            <a
+              onClick={() => openModal("Privacy Policy", policyContent.privacy)}
+              className="link link-hover"
+            >
+              Privacy Policy
+            </a>
+            <a
+              onClick={() => openModal("Cookies Policy", policyContent.cookies)}
+              className="link link-hover"
+            >
+              Cookie Policy
+            </a>
+          </div>
+        </div>
+
+        {/* Social Media Section */}
+        <div className="flex gap-4 mt-6 lg:mt-0">
           <a
-            onClick={() => openModal("Terms of Use", policyContent.terms)}
-            className="link link-hover"
+            href="https://facebook.com"
+            className="text-white text-xl hover:text-purple-800"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Terms of Use
+            <FaFacebook />
           </a>
           <a
-            onClick={() => openModal("Privacy Policy", policyContent.privacy)}
-            className="link link-hover"
+            href="https://twitter.com"
+            className="text-white text-xl hover:text-purple-800"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Privacy Policy
+            <FaTwitter />
           </a>
           <a
-            onClick={() => openModal("Cookies Policy", policyContent.cookies)}
-            className="link link-hover"
+            href="https://linkedin.com"
+            className="text-white text-xl hover:text-purple-800"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Cookie Policy
+            <FaLinkedin />
           </a>
-        </nav>
+          <a
+            href="https://instagram.com"
+            className="text-white text-xl hover:text-purple-800"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
+          </a>
+        </div>
       </footer>
+
+      {/* Newsletter Subscription */}
+
+      {/* Copyright */}
+      <div className="bg-[#08020e] text-center py-4 text-white border-t border-gray-700">
+        <p>
+          © {new Date().getFullYear()} Agile Company Limited. All rights
+          reserved.
+        </p>
+        <p className="mt-2">
+          Developed by <span className="text-purple-800">Md Sifat</span> &{" "}
+          <span className="text-purple-800">Yeamim Sajid</span>
+        </p>
+      </div>
 
       {/* Modal */}
       {isModalOpen && (
-        <div
-          className="modal modal-open"
-          onClick={closeModal} // Close modal if clicked outside
-        >
+        <div className="modal modal-open" onClick={closeModal}>
           <div
             className="modal-box relative"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal box
+            onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={closeModal}
@@ -150,18 +198,6 @@ export default function Footer() {
           </div>
         </div>
       )}
-
-      {/* Copyright */}
-      <div className="bg-[#08020e] text-center py-4 text-white border-t border-gray-700">
-        <p>
-          © {new Date().getFullYear()} Agile Company Limited. All rights
-          reserved.
-        </p>
-        <p className="mt-2">
-          Developed by <span className="text-purple-800">Md Sifat</span> &{" "}
-          <span className="text-purple-800">Yeamim Sajid</span>
-        </p>
-      </div>
     </section>
   );
 }

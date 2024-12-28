@@ -62,7 +62,7 @@ export default function Projects() {
           <div className="w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
               {/* Card 1 */}
-              <div className="bg-[#1e1e2f] shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden">
+              <div className="bg-[#0f041a] shadow-purple-800 shadow-2xl hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden">
                 <div className="flex flex-row items-center px-6 py-4">
                   <h2 className="font-bold text-lg lg:text-2xl flex-1">
                     Medi<span className="text-pink-500">C</span>
@@ -97,7 +97,7 @@ export default function Projects() {
               </div>
 
               {/* Card 2 */}
-              <div className="bg-[#1e1e2f] shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden">
+              <div className="bg-[#0f041a] shadow-purple-800 shadow-2xl hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden">
                 <div className="flex flex-row items-center px-6 py-4">
                   <h2 className="font-bold text-lg lg:text-2xl flex-1">
                     Career<span className="text-blue-400">HUB</span>
@@ -133,7 +133,7 @@ export default function Projects() {
               </div>
 
               {/* Card 3 */}
-              <div className="bg-[#1e1e2f] shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden">
+              <div className="bg-[#0f041a] shadow-purple-800 shadow-2xl hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden">
                 <div className="flex flex-row items-center px-6 py-4">
                   <h2 className="font-bold text-lg lg:text-2xl flex-1">
                     Travel<span className="text-orange-500">Deabel</span>
@@ -168,7 +168,7 @@ export default function Projects() {
               </div>
 
               {/* Card 4 */}
-              <div className="bg-[#1e1e2f] shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden">
+              <div className="bg-[#0f041a] mb-12 shadow-purple-800 shadow-2xl hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden">
                 <div className="flex flex-row items-center px-6 py-4">
                   <h2 className="font-bold text-lg lg:text-2xl flex-1">
                     Aestheti<span className="text-rose-800">CS</span>
@@ -203,10 +203,10 @@ export default function Projects() {
               </div>
 
               {/* Card 5 */}
-              <div className="bg-[#1e1e2f] shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden">
+              <div className="bg-[#0f041a] shadow-purple-800 shadow-2xl hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden mb-12">
                 <div className="flex flex-row items-center px-6 py-4">
                   <h2 className="font-bold text-lg lg:text-2xl flex-1">
-                    Rent<span className="text-yellow-500">Zen</span>
+                    Penguin<span className="text-yellow-500">Cloth</span>
                   </h2>
                 </div>
                 <figure className="relative">
