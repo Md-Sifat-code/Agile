@@ -54,11 +54,11 @@ export default function Footer() {
   };
 
   return (
-    <section className="bg-[#08020e] text-white">
+    <section className="bg-[#08020e] border-t-2 border-gray-500 rounded-tl-3xl rounded-tr-3xl text-white">
       {/* Footer */}
-      <footer className="footer container mx-auto flex flex-col lg:flex-row justify-around items-start lg:items-center mt-12 p-10">
+      <div className=" container mx-auto grid grid-cols-1 lg:grid-cols-5 mt-12 p-10">
         {/* Company Section */}
-        <aside className="flex flex-col gap-4">
+        <aside className="flex  flex-col gap-4">
           <div className="text-4xl text-white ma font-bold">
             <h1>
               A<span className="fo text-purple-800 text-5xl">g</span>ile
@@ -72,7 +72,7 @@ export default function Footer() {
         </aside>
 
         {/* Navigation Links */}
-        <nav className="text-white">
+        <div className="text-white flex flex-col justify-start  gap-5 items-center">
           <h6 className="footer-title mb-4">Quick Links</h6>
           <a
             onClick={() => scrollToSection("home")}
@@ -98,10 +98,10 @@ export default function Footer() {
           >
             Contact
           </a>
-        </nav>
+        </div>
 
-        <div className="text-white flex flex-col">
-          <h6 className="footer-title flex-1 mb-4">Legal</h6>
+        <div className="text-white flex flex-col justify-start items-center gap-5">
+          <h6 className="footer-title mb-4">Legal</h6>
           <div className="flex flex-col gap-5">
             <a
               onClick={() => openModal("Terms of Use", policyContent.terms)}
@@ -123,11 +123,34 @@ export default function Footer() {
             </a>
           </div>
         </div>
+        <div className="text-white flex flex-col justify-start items-center gap-5">
+          <h6 className="footer-title mb-4">Projects</h6>
+          <div className="flex flex-col items-center gap-5">
+            <a
+              onClick={() => openModal("Terms of Use", policyContent.terms)}
+              className="link link-hover font-bold"
+            >
+              Medi<span className="text-pink-500 font-bold pop">C</span>
+            </a>
+            <a
+              onClick={() => openModal("Privacy Policy", policyContent.privacy)}
+              className="link link-hover font-bold"
+            >
+              Aestheti<span className="text-red-500 font-bold">CS</span>
+            </a>
+            <a
+              onClick={() => openModal("Cookies Policy", policyContent.cookies)}
+              className="link link-hover font-bold"
+            >
+              Penguin<span className="text-yellow-400 font-bold">Cloth</span>
+            </a>
+          </div>
+        </div>
 
         {/* Social Media Section */}
-        <div className="flex gap-4 mt-6 lg:mt-0">
+        <div className="flex flex-col justify-center items-center gap-4 mt-6 lg:mt-0">
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/profile.php?id=61571068927921"
             className="text-white text-xl hover:text-purple-800"
             target="_blank"
             rel="noopener noreferrer"
@@ -159,7 +182,7 @@ export default function Footer() {
             <FaInstagram />
           </a>
         </div>
-      </footer>
+      </div>
 
       {/* Newsletter Subscription */}
 

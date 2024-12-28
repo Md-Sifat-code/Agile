@@ -8,7 +8,7 @@ import { FaStar } from "react-icons/fa6";
 export default function About() {
   return (
     <section>
-      <div className="container mx-auto mt-12 bg-[#08020e] px-4">
+      <div className="container mx-auto mb-12 mt-12 bg-[#08020e] px-4">
         {/* Breadcrumb Navigation */}
         <div className="flex justify-center items-center">
           <div className="w-full  mt-12">
