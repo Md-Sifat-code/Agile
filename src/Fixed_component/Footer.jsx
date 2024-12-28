@@ -54,9 +54,9 @@ export default function Footer() {
   };
 
   return (
-    <section className="bg-[#08020e] border-t-2 border-gray-500 rounded-tl-3xl rounded-tr-3xl text-white">
+    <section className="bg-[#08020e] border-t-2 border-gray-500 rounded-tl-3xl rounded-tr-3xl  text-white">
       {/* Footer */}
-      <div className=" container mx-auto grid grid-cols-1 lg:grid-cols-5 mt-12 p-10">
+      <div className=" container mx-auto grid grid-cols-1 lg:grid-cols-5 mt-12 gap-12 p-10">
         {/* Company Section */}
         <aside className="flex  flex-col gap-4">
           <div className="text-4xl text-white ma font-bold">
@@ -72,7 +72,7 @@ export default function Footer() {
         </aside>
 
         {/* Navigation Links */}
-        <div className="text-white flex flex-col justify-start  gap-5 items-center">
+        <div className="text-white flex flex-col justify-start  gap-5 items-start lg:items-center">
           <h6 className="footer-title mb-4">Quick Links</h6>
           <a
             onClick={() => scrollToSection("home")}
@@ -100,7 +100,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="text-white flex flex-col justify-start items-center gap-5">
+        <div className="text-white flex flex-col justify-start items-start lg:items-center gap-5">
           <h6 className="footer-title mb-4">Legal</h6>
           <div className="flex flex-col gap-5">
             <a
@@ -123,9 +123,9 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="text-white flex flex-col justify-start items-center gap-5">
+        <div className="text-white flex flex-col justify-start items-start lg:items-center gap-5">
           <h6 className="footer-title mb-4">Projects</h6>
-          <div className="flex flex-col items-center gap-5">
+          <div className="flex flex-col items-start lg:items-center gap-5">
             <a
               onClick={() => openModal("Terms of Use", policyContent.terms)}
               className="link link-hover font-bold"
@@ -148,7 +148,8 @@ export default function Footer() {
         </div>
 
         {/* Social Media Section */}
-        <div className="flex flex-col justify-center items-center gap-4 mt-6 lg:mt-0">
+        <div className="text-white flex flex-col justify-start items-start lg:items-center gap-5">
+          <h6 className="footer-title mb-4">Socials</h6>
           <a
             href="https://www.facebook.com/profile.php?id=61571068927921"
             className="text-white text-xl hover:text-purple-800"
