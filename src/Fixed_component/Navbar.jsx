@@ -6,16 +6,14 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const [scrollToId, setScrollToId] = useState(null); // Stores the section ID to scroll to
+  const [scrollToId, setScrollToId] = useState(null);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Helper function to determine active link
   const isActive = (path) => location.pathname === path;
 
-  // Function to handle scrolling to a section
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -23,27 +21,25 @@ export default function Navbar() {
     }
   };
 
-  // Handle navigation and scrolling for testimonials
   const handleTestimonialsClick = () => {
     if (location.pathname !== "/") {
-      setScrollToId("testimonials"); // Set the target ID
-      navigate("/"); // Navigate to the home page
+      setScrollToId("testimonials");
+      navigate("/");
     } else {
       scrollToSection("testimonials");
     }
   };
 
-  // Scroll to the section once on "/" route
   useEffect(() => {
     if (location.pathname === "/" && scrollToId) {
       scrollToSection(scrollToId);
-      setScrollToId(null); // Reset the target ID
+      setScrollToId(null);
     }
   }, [location.pathname, scrollToId]);
 
   return (
     <section className="bg-[#04030c]">
-      <div className="container mx-auto flex flex-row justify-between items-center px-4 py-4 lg:px-8 lg:py-6 mt-8">
+      <div className="max-w-screen-xl mx-auto flex flex-row justify-between items-center px-4 py-4 lg:px-8 lg:py-6 mt-8">
         {/* Logo */}
         <div className="text-5xl lg:text-6xl text-white ma font-bold">
           <h1>

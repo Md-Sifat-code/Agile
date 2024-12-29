@@ -21,7 +21,7 @@ export default function AboutUs() {
         {/* Team Members */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Frontend - Md Sifat Bin Jibon */}
-          <div className="flex flex-col items-center bg-[#0f041a] rounded-lg shadow-md shadow-purple-800 p-8 transition-transform hover:scale-105">
+          <div className="flex flex-col items-center bg-[#210633] rounded-lg shadow-md shadow-purple-800 p-8 transition-transform hover:scale-105">
             <img
               src={frontend}
               alt="Md Sifat Bin Jibon"
@@ -47,7 +47,7 @@ export default function AboutUs() {
           </div>
 
           {/* Backend - Yeamim Hossain Sajid */}
-          <div className="flex flex-col items-center bg-[#0f041a] rounded-lg shadow-md shadow-purple-800  p-8 transition-transform hover:scale-105">
+          <div className="flex flex-col items-center bg-[#210633] rounded-lg shadow-md shadow-purple-800  p-8 transition-transform hover:scale-105">
             <img
               src={backend}
               alt="Yeamim Hossain Sajid"

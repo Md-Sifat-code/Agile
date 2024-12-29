@@ -162,7 +162,7 @@ export default function TechnologyStack() {
           ].map((tech, index) => (
             <div
               key={index}
-              className="flex flex-col items-center space-y-2 p-4 rounded-lg bg-[#0f041a] shadow-md shadow-purple-800  hover:scale-105 transform transition-all duration-300 overflow-hidden mb-2"
+              className="flex flex-col items-center space-y-2 p-4 rounded-lg bg-[#210633]  shadow-md shadow-purple-800  hover:scale-105 transform transition-all duration-300 overflow-hidden mb-2"
             >
               {tech.image ? (
                 <img

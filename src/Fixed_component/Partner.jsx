@@ -28,7 +28,7 @@ export default function Partner() {
     <section className="bg-[#08020e]">
       <div className="container mx-auto px-4">
         <h1
-          className=" mt-[-18px] pop text-white text-5xl font-light text-center mb-12"
+          className="  pop text-white text-5xl font-light text-center mb-12"
           data-aos="zoom-in"
         >
           PARTNER{" "}
@@ -37,7 +37,7 @@ export default function Partner() {
         <div className="flex flex-wrap lg:flex-row md:flex-col gap-12 justify-center items-center lg:items-stretch">
           {/* Card 1 */}
           <div
-            className=" shadow-2xl shadow-[#430847] bg-[#0f041a] flex rounded-[18px] flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8 text-white"
+            className=" shadow-2xl shadow-purple-800  bg-[#210633] flex rounded-[18px] flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8 text-white"
             data-aos="zoom-in"
             data-aos-delay="100"
           >
@@ -70,7 +70,7 @@ export default function Partner() {
           </div>
           {/* Card 2 */}
           <div
-            className="shadow-2xl shadow-[#430847] bg-[#0f041a] flex rounded-[18px] flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8 text-white"
+            className="shadow-2xl shadow-purple-800 bg-[#210633] flex rounded-[18px] flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8 text-white"
             data-aos="zoom-in"
             data-aos-delay="100"
           >
@@ -100,7 +100,7 @@ export default function Partner() {
           </div>
           {/* Card 3 */}
           <div
-            className="shadow-2xl shadow-[#430847] bg-[#0f041a] flex rounded-[18px] flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8 text-white mb-14"
+            className="shadow-2xl shadow-purple-800 bg-[#210633] flex rounded-[18px] flex-col justify-between w-full lg:w-1/3 md:w-2/3 p-8 text-white mb-14"
             data-aos="zoom-in"
             data-aos-delay="100"
           >
@@ -132,3 +132,5 @@ export default function Partner() {
     </section>
   );
 }
+// bg-[#F8BBD0]
+// bg-[#E1BEE7]

@@ -58,7 +58,7 @@ export default function Testimonials() {
               key={client.id}
               className="testimonial-card transition-transform duration-500"
             >
-              <div className="card w-full h-[350px] bg-[#0f041a] shadow-xl rounded-lg p-6 flex flex-col justify-between">
+              <div className="card w-full h-[350px] bg-[#210633]  shadow-xl rounded-lg p-6 flex flex-col justify-between">
                 <p className="co border-b border-purple-800 py-6 text-lg">
                   "{client.feedback}"
                 </p>

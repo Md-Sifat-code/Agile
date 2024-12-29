@@ -41,7 +41,7 @@ export default function ChooseUs() {
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-6xl w-full">
           {/* First Feature */}
           <div
-            className="flex flex-col justify-center items-center bg-[#0f041a] p-8 rounded-lg shadow-2xl shadow-[#430847] hover:scale-105 transition-transform duration-300"
+            className="flex flex-col justify-center items-center bg-[#210633] p-8 rounded-lg shadow-2xl shadow-purple-800 hover:scale-105 transition-transform duration-300"
             data-aos="fade-right"
           >
             <h2 className="text-xl sm:text-2xl text-white font-semibold text-center">
@@ -55,7 +55,7 @@ export default function ChooseUs() {
 
           {/* Second Feature */}
           <div
-            className="flex flex-col justify-center items-center bg-[#0f041a] p-8 rounded-lg shadow-2xl shadow-[#430847] hover:scale-105 transition-transform duration-300"
+            className="flex flex-col justify-center items-center bg-[#210633] p-8 rounded-lg shadow-2xl shadow-purple-800 hover:scale-105 transition-transform duration-300"
             data-aos="zoom-in"
           >
             <h2 className="text-xl sm:text-2xl text-white font-semibold text-center">
@@ -70,7 +70,7 @@ export default function ChooseUs() {
 
           {/* Third Feature */}
           <div
-            className="flex flex-col justify-center items-center bg-[#0f041a] p-8 rounded-lg shadow-2xl shadow-[#430847] hover:scale-105 transition-transform duration-300"
+            className="flex flex-col justify-center items-center bg-[#210633] p-8 rounded-lg shadow-2xl shadow-purple-800 hover:scale-105 transition-transform duration-300"
             data-aos="fade-left"
           >
             <h2 className="text-xl sm:text-2xl text-white font-semibold text-center">

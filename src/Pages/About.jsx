@@ -75,7 +75,7 @@ export default function About() {
               </h1>
             </div>
           </div>
-          <div className="h-auto border border-gray-600 grid grid-cols-1 rounded-[18px] p-4 md:p-0 gap-6 md:gap-0 bg-[#0f041a] shadow-2xl shadow-[#430847]">
+          <div className="h-auto border border-gray-600 grid grid-cols-1 rounded-[18px] p-4 md:p-0 gap-6 md:gap-0 bg-[#210633]  shadow-2xl shadow-purple-800">
             <div className="flex flex-col justify-center items-center text-center p-4 lg:p-10">
               <h1 className="text-white text-xl md:text-2xl font-semibold">
                 What makes us unique
@@ -107,7 +107,7 @@ export default function About() {
           {/* Cards Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Vision Card */}
-            <div className="bg-[#0f041a] bg-opacity-80 backdrop-blur-lg rounded-lg shadow-2xl p-8 text-center transition-transform transform hover:scale-105 will-change-transform">
+            <div className="bg-[#210633]  bg-opacity-80 backdrop-blur-lg rounded-lg shadow-2xl p-8 text-center transition-transform transform hover:scale-105 will-change-transform">
               <div className="flex justify-center items-center mb-4 text-purple-800">
                 <FaLightbulb className="text-4xl" />
               </div>
@@ -122,7 +122,7 @@ export default function About() {
             </div>
 
             {/* Dream Card */}
-            <div className="bg-[#0f041a] bg-opacity-80 backdrop-blur-lg rounded-lg shadow-2xl p-8 text-center transition-transform transform hover:scale-105 will-change-transform">
+            <div className="bg-[#210633]  bg-opacity-80 backdrop-blur-lg rounded-lg shadow-2xl p-8 text-center transition-transform transform hover:scale-105 will-change-transform">
               <div className="flex justify-center items-center mb-4 text-purple-800">
                 <FaRocket className="text-4xl" />
               </div>
@@ -136,7 +136,7 @@ export default function About() {
             </div>
 
             {/* Mission Card */}
-            <div className="bg-[#0f041a] bg-opacity-80 backdrop-blur-lg rounded-lg shadow-2xl p-8 text-center transition-transform transform hover:scale-105 will-change-transform">
+            <div className="bg-[#210633]  bg-opacity-80 backdrop-blur-lg rounded-lg shadow-2xl p-8 text-center transition-transform transform hover:scale-105 will-change-transform">
               <div className="flex justify-center items-center mb-4 text-purple-800">
                 <FaHandshake className="text-4xl" />
               </div>

@@ -135,7 +135,7 @@ const Emai = () => {
           </p>
         </div>
 
-        <div className="bg-[#0f041a] rounded-lg shadow-lg p-4 sm:p-6 lg:p-10">
+        <div className="bg-[#210633]  rounded-lg shadow-lg p-4 sm:p-6 lg:p-10">
           <form onSubmit={formik.handleSubmit} className="flex flex-col gap-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {renderInput("Email Address", "mailAddress", "Enter your email")}

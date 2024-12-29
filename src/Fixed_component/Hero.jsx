@@ -28,7 +28,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-4 items-center">
         {/* Left Section */}
-        <div className="flex flex-col justify-center items-start text-left col-span-2 space-y-6">
+        <div className="flex flex-col justify-start items-start text-left col-span-2 space-y-6">
           <h1 className="text-white font-bold text-3xl sm:text-4xl lg:text-5xl mt-8 lg:mt-0 leading-tight">
             Your Trustworthy{" "}
             <img
@@ -45,10 +45,10 @@ export default function Hero() {
             From Software Development to End-to-End
             <br className="hidden sm:block" /> Digital Solutions
           </p>
-          <div className="flex w-[70%]   flex-col sm:flex-row justify-between gap-4 mt-4 sm:mt-6">
+          <div className="flex w-[70%] flex-col sm:flex-row justify-between gap-4 mt-4 sm:mt-6">
             <Link
               to={"/projects"}
-              className=" btn btn-outline font-bold text-sm sm:text-base px-6 sm:px-8 py-3  text-white border-purple-800 hover:bg-purple-800 hover:text-white"
+              className="btn btn-outline font-bold text-sm sm:text-base px-6 sm:px-8 py-3 text-white border-purple-800 hover:bg-purple-800 hover:text-white"
             >
               Projects
               <FaArrowUp className="rotate-45 text-lg" />
@@ -62,6 +62,7 @@ export default function Hero() {
             </button>
           </div>
         </div>
+
         {/* Right Section */}
         <div className="flex justify-center items-center mt-8 lg:mt-0 col-span-2">
           <img
