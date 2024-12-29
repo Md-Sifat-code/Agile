@@ -67,15 +67,11 @@ export default function ContactUs() {
           </div>
         </div>
       </section>
-      {/* Emai component */}
-      <section className="container mx-auto">
-        <Emai />
-      </section>
       {/* mop section */}
       <section className="container mx-auto mt-[100px] mb-[100px] px-4 relative">
         <div className="flex justify-center items-center">
           <img
-            className="w-full md:w-3/4 lg:w-2/3 rounded-lg shadow-lg object-cover"
+            className="w-full md:w-3/4 lg:w-full rounded-lg shadow-lg object-cover"
             src={mop}
             alt="Mop"
           />
@@ -83,7 +79,7 @@ export default function ContactUs() {
 
         {/* Static Card with Glassified Effect */}
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 p-6 bg-white/30 backdrop-blur-lg text-black rounded-lg shadow-lg w-[250px]">
-          <h1 className="text-xl font-bold text-white">Dhanmondi, Dhaka</h1>
+          <h1 className="text-xl font-bold text-white">United City, Dhaka</h1>
           <p className="mt-2 text-sm">Agiles office</p>
         </div>
       </section>
@@ -120,6 +116,10 @@ export default function ContactUs() {
             <h3 className="text-xl font-semibold mt-4 text-white">Follow Us</h3>
           </div>
         </div>
+      </section>
+      {/* Emai component */}
+      <section className="container mx-auto">
+        <Emai />
       </section>
     </>
   );

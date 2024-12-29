@@ -45,7 +45,7 @@ export default function Hero() {
             From Software Development to End-to-End
             <br className="hidden sm:block" /> Digital Solutions
           </p>
-          <div className="flex w-[70%] flex-col sm:flex-row justify-between gap-4 mt-4 sm:mt-6">
+          <div className="flex lg:w-[70%] flex-col sm:flex-row justify-between gap-4 mt-4 sm:mt-6">
             <Link
               to={"/projects"}
               className="btn btn-outline font-bold text-sm sm:text-base px-6 sm:px-8 py-3 text-white border-purple-800 hover:bg-purple-800 hover:text-white"

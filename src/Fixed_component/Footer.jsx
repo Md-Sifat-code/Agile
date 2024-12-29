@@ -54,7 +54,7 @@ export default function Footer() {
   };
 
   return (
-    <section className="bg-[#08020e] border-t-2 border-gray-500 rounded-tl-3xl rounded-tr-3xl  text-white">
+    <section className="bg-[#210633] border-t-2 border-gray-500 rounded-tl-3xl mt-12 rounded-tr-3xl  text-white">
       {/* Footer */}
       <div className=" container mx-auto grid grid-cols-1 lg:grid-cols-5 mt-12 gap-12 p-10">
         {/* Company Section */}
@@ -188,7 +188,7 @@ export default function Footer() {
       {/* Newsletter Subscription */}
 
       {/* Copyright */}
-      <div className="bg-[#08020e] text-center py-4 text-white border-t border-gray-700">
+      <div className="bg-[#210633] text-center py-4 text-white border-t border-gray-700">
         <p>
           © {new Date().getFullYear()} Agile Company Limited. All rights
           reserved.
