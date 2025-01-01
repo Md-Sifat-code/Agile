@@ -11,7 +11,7 @@ export default function Hero() {
   };
   return (
     <section
-      className="relative py-10"
+      className="relative py-10 border-b-2 border-purple-200"
       style={{
         backgroundImage: `url(${ng})`, // Set ng.svg as background
         backgroundSize: "cover",
