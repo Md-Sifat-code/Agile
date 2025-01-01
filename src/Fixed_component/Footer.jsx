@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom";
 export default function Footer() {
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState({ title: "", content: "" });
@@ -86,12 +87,9 @@ export default function Footer() {
           >
             About Us
           </a>
-          <a
-            onClick={() => scrollToSection("projects")}
-            className="link link-hover"
-          >
+          <Link to={"/projects"} className="link link-hover">
             Projects
-          </a>
+          </Link>
           <a
             onClick={() => scrollToSection("contact")}
             className="link link-hover"
@@ -158,14 +156,7 @@ export default function Footer() {
           >
             <FaFacebook />
           </a>
-          <a
-            href="https://twitter.com"
-            className="text-white text-xl hover:text-purple-800"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTwitter />
-          </a>
+
           <a
             href="https://linkedin.com"
             className="text-white text-xl hover:text-purple-800"
@@ -173,14 +164,6 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <FaLinkedin />
-          </a>
-          <a
-            href="https://instagram.com"
-            className="text-white text-xl hover:text-purple-800"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram />
           </a>
         </div>
       </div>

@@ -35,7 +35,7 @@ export default function Testimonials() {
           spaceBetween={30}
           centeredSlides={true} // Centers the active slide
           autoplay={{
-            delay: 2000,
+            delay: 2500,
             disableOnInteraction: false, // Added to ensure autoplay continues after interaction
             waitForTransition: false, // Added to make autoplay start immediately on load
           }}
