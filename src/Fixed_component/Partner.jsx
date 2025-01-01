@@ -25,7 +25,7 @@ export default function Partner() {
   }, []);
 
   return (
-    <section className="bg-[#08020e]">
+    <section className="bg-[#08020e] mt-12">
       <div className="container mx-auto px-4">
         <h1
           className="  pop text-white text-5xl font-light text-center mb-12"
