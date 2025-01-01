@@ -33,13 +33,13 @@ export default function About() {
               <p className="text-gray-300 text-sm md:text-base w-full">
                 Agiles is a website and app development company that is
                 passionate about coding and balancing customer needs with the
-                right tech solutions. For over 10 years, we have been creating
-                custom technology solutions for clients in the UK, Canada, and
-                across South Asia countries. Our technological expertise,
-                management skills, and recruitment model set us apart. We can
-                help you develop any project from scratch, enhance your existing
-                team with dedicated experts, or find specialists with specific
-                skills and experience to help you get your project done.
+                right tech solutions. For over years, we have been creating
+                custom technology solutions for clients in the Bangladesh. Our
+                technological expertise, management skills, and recruitment
+                model set us apart. We can help you develop any project from
+                scratch, enhance your existing team with dedicated experts, or
+                find specialists with specific skills and experience to help you
+                get your project done.
               </p>
             </div>
 
@@ -57,19 +57,19 @@ export default function About() {
             <div className="flex gap-4 flex-col justify-center items-center mt-6">
               <p className="text-white text-sm md:text-base">Projects</p>
               <h1 className="text-white text-4xl font-bold">
-                <CountUp end={20} duration={5} /> {/* Projects count */}
+                <CountUp end={5} duration={5} /> {/* Projects count */}
               </h1>
             </div>
             <div className="flex flex-col gap-4 justify-center items-center mt-6">
               <p className="text-white text-lg md:text-base">Users</p>
               <h1 className="text-purple-800 text-4xl font-bold">
-                <CountUp end={50} duration={5} />+{/* Projects count */}
+                <CountUp end={500} duration={5} />+{/* Projects count */}
               </h1>
             </div>
             <div className="flex flex-col gap-4 justify-center items-center mt-6">
               <p className="text-white text-sm md:text-base">Rating</p>
-              <h1 className="text-white text-4xl flex  gap-2 font-bold">
-                <CountUp end={5} duration={5} />
+              <h1 className="text-white text-4xl flex items-center gap-2 font-bold">
+                <p>4.8</p>
                 <FaStar className="text-purple-800 text-[24px]" />{" "}
                 {/* Projects count */}
               </h1>

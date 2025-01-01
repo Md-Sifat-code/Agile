@@ -3,7 +3,8 @@ import { useFormik } from "formik";
 import axios from "axios";
 import * as yup from "yup";
 import swal from "sweetalert";
-
+import { MdRocketLaunch } from "react-icons/md";
+import { IoCheckmarkDoneSharp } from "react-icons/io5";
 // Validation schema using Yup
 const Emai = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -118,21 +119,53 @@ const Emai = () => {
   return (
     <section
       id="contact"
-      className="bg-[#08020e] text-white py-12 px-4 sm:px-8 lg:px-16"
+      className="bg-[#08020e] text-white mt-12 py-12 mb-12 px-4 sm:px-8 lg:px-16"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-12">
-        <div className="flex flex-col justify-center items-center text-center">
-          <h1 className="co text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
-            Reach Out with your
-            <br /> Thoughts
+      <div className="">
+        <h1 className="uppercase text-center  font-bold text-xl md:text-3xl lg:text-5xl">
+          <span className="px-4 font-thin">Let’s</span> Talk About Your Project
+        </h1>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-16">
+        <div className="flex  p-12 h-full flex-col justify-center items-start ">
+          <h1 className="co text-2xl text-start sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+            <MdRocketLaunch className=" inline-block m-2 text-purple-800 " />
+            Reach Out with
+            <br /> your Thoughts
           </h1>
-          <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl w-full sm:w-[80%] md:w-[70%] pop">
-            For more information, send us your details, requirements, and
-            project details. We will reach out to you within 2-23 working hours.
-            <span className="m-4 text-purple-600 text-base sm:text-lg md:text-xl font-bold ma">
-              Happy Browsing!!
-            </span>
-          </p>
+          <div className="pop md:w-[80%] mt-12">
+            <ul className="flex flex-col gap-6">
+              <li className="flex items-center gap-4">
+                <IoCheckmarkDoneSharp className="inline-block text-orange-400" />{" "}
+                We respond within 23 hours
+              </li>
+              <li className="flex items-center gap-4">
+                <IoCheckmarkDoneSharp className="inline-block text-orange-400" />{" "}
+                You can connect directly with our BDDs/tech specialists, not
+                just sales managers
+              </li>
+              <li className="flex items-center gap-4">
+                <IoCheckmarkDoneSharp className="inline-block text-orange-400" />{" "}
+                We provide detailed project estimation completely free of charge
+              </li>
+              <li className="flex items-center gap-4">
+                <IoCheckmarkDoneSharp className="inline-block text-orange-400" />{" "}
+                Our Custom Software and web applications are designed to make
+                your work faster
+              </li>
+              <li className="flex items-center gap-4">
+                <IoCheckmarkDoneSharp className="inline-block text-orange-400" />{" "}
+                <p>
+                  We build our relationships with customers on trust and full
+                  transparency
+                </p>
+              </li>
+            </ul>
+            <p className="mt-12 text-purple-800">
+              We enjoy reading, so the more you tell us about your project, the
+              happier we’ll be.
+            </p>
+          </div>
         </div>
 
         <div className="bg-[#210633]  rounded-lg shadow-lg p-4 sm:p-6 lg:p-10">

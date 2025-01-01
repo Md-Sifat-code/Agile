@@ -11,12 +11,13 @@ export default function Hero() {
   };
   return (
     <section
-      className="relative py-10 border-b-2 border-purple-200"
+      className="relative py-10 border-b-[1px] border-[#5618a5]"
       style={{
         backgroundImage: `url(${ng})`, // Set ng.svg as background
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
+        boxShadow: "0 10px 10px -5px #58065b", // Glowing effect on the bottom border
       }}
     >
       {/* Semi-transparent overlay */}
