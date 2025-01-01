@@ -57,9 +57,9 @@ export default function Footer() {
   return (
     <section className="bg-[#210633] border-t-2 border-gray-500 rounded-tl-3xl mt-12 rounded-tr-3xl  text-white">
       {/* Footer */}
-      <div className=" container mx-auto grid grid-cols-1 lg:grid-cols-5 mt-12 gap-12 p-10">
+      <div className=" container mx-auto grid grid-cols-1 lg:grid-cols-4  mt-12 gap-12 p-10">
         {/* Company Section */}
-        <aside className="flex  flex-col gap-4">
+        <aside className="flex flex-col gap-4  ">
           <div className="text-4xl text-white ma font-bold">
             <h1>
               A<span className="fo text-purple-800 text-5xl">g</span>ile
@@ -73,98 +73,111 @@ export default function Footer() {
         </aside>
 
         {/* Navigation Links */}
-        <div className="text-white flex flex-col justify-start  gap-5 items-start lg:items-center">
-          <h6 className="footer-title mb-4">Quick Links</h6>
-          <a
-            onClick={() => scrollToSection("home")}
-            className="link link-hover"
-          >
-            Home
-          </a>
-          <a
-            onClick={() => scrollToSection("about")}
-            className="link link-hover"
-          >
-            About Us
-          </a>
-          <Link to={"/projects"} className="link link-hover">
-            Projects
-          </Link>
-          <a
-            onClick={() => scrollToSection("contact")}
-            className="link link-hover"
-          >
-            Contact
-          </a>
-        </div>
+        <div className="col-span-3">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-white flex flex-col justify-start  gap-5 items-start lg:items-center">
+              <h6 className="footer-title mb-4">Quick Links</h6>
+              <a
+                onClick={() => scrollToSection("home")}
+                className="link link-hover"
+              >
+                Home
+              </a>
+              <a
+                onClick={() => scrollToSection("about")}
+                className="link link-hover"
+              >
+                About Us
+              </a>
+              <Link to={"/projects"} className="link link-hover">
+                Projects
+              </Link>
+              <a
+                onClick={() => scrollToSection("contact")}
+                className="link link-hover"
+              >
+                Contact
+              </a>
+            </div>
 
-        <div className="text-white flex flex-col justify-start items-start lg:items-center gap-5">
-          <h6 className="footer-title mb-4">Legal</h6>
-          <div className="flex flex-col gap-5">
-            <a
-              onClick={() => openModal("Terms of Use", policyContent.terms)}
-              className="link link-hover"
-            >
-              Terms of Use
-            </a>
-            <a
-              onClick={() => openModal("Privacy Policy", policyContent.privacy)}
-              className="link link-hover"
-            >
-              Privacy Policy
-            </a>
-            <a
-              onClick={() => openModal("Cookies Policy", policyContent.cookies)}
-              className="link link-hover"
-            >
-              Cookie Policy
-            </a>
+            <div className="text-white flex flex-col justify-start items-start lg:items-center gap-5">
+              <h6 className="footer-title mb-4">Legal</h6>
+              <div className="flex flex-col gap-5">
+                <a
+                  onClick={() => openModal("Terms of Use", policyContent.terms)}
+                  className="link link-hover"
+                >
+                  Terms of Use
+                </a>
+                <a
+                  onClick={() =>
+                    openModal("Privacy Policy", policyContent.privacy)
+                  }
+                  className="link link-hover"
+                >
+                  Privacy Policy
+                </a>
+                <a
+                  onClick={() =>
+                    openModal("Cookies Policy", policyContent.cookies)
+                  }
+                  className="link link-hover"
+                >
+                  Cookie Policy
+                </a>
+              </div>
+            </div>
+            <div className="text-white flex flex-col justify-start items-start lg:items-center gap-5">
+              <h6 className="footer-title mb-4">Projects</h6>
+              <div className="flex flex-col items-start lg:items-center gap-5">
+                <a
+                  onClick={() => openModal("Terms of Use", policyContent.terms)}
+                  className="link link-hover font-bold"
+                >
+                  Medi<span className="text-pink-500 font-bold pop">C</span>
+                </a>
+                <a
+                  onClick={() =>
+                    openModal("Privacy Policy", policyContent.privacy)
+                  }
+                  className="link link-hover font-bold"
+                >
+                  Aestheti<span className="text-red-500 font-bold">CS</span>
+                </a>
+                <a
+                  onClick={() =>
+                    openModal("Cookies Policy", policyContent.cookies)
+                  }
+                  className="link link-hover font-bold"
+                >
+                  Penguin
+                  <span className="text-yellow-400 font-bold">Cloth</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Social Media Section */}
+            <div className="text-white flex flex-col justify-start items-start lg:items-center gap-5">
+              <h6 className="footer-title mb-4">Socials</h6>
+              <a
+                href="https://www.facebook.com/profile.php?id=61571068927921"
+                className="text-white text-xl hover:text-purple-800"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebook />
+              </a>
+
+              <a
+                href="https://linkedin.com"
+                className="text-white text-xl hover:text-purple-800"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="text-white flex flex-col justify-start items-start lg:items-center gap-5">
-          <h6 className="footer-title mb-4">Projects</h6>
-          <div className="flex flex-col items-start lg:items-center gap-5">
-            <a
-              onClick={() => openModal("Terms of Use", policyContent.terms)}
-              className="link link-hover font-bold"
-            >
-              Medi<span className="text-pink-500 font-bold pop">C</span>
-            </a>
-            <a
-              onClick={() => openModal("Privacy Policy", policyContent.privacy)}
-              className="link link-hover font-bold"
-            >
-              Aestheti<span className="text-red-500 font-bold">CS</span>
-            </a>
-            <a
-              onClick={() => openModal("Cookies Policy", policyContent.cookies)}
-              className="link link-hover font-bold"
-            >
-              Penguin<span className="text-yellow-400 font-bold">Cloth</span>
-            </a>
-          </div>
-        </div>
-
-        {/* Social Media Section */}
-        <div className="text-white flex flex-col justify-start items-start lg:items-center gap-5">
-          <h6 className="footer-title mb-4">Socials</h6>
-          <a
-            href="https://www.facebook.com/profile.php?id=61571068927921"
-            className="text-white text-xl hover:text-purple-800"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook />
-          </a>
-
-          <a
-            href="https://linkedin.com"
-            className="text-white text-xl hover:text-purple-800"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin />
-          </a>
         </div>
       </div>
 
