@@ -92,12 +92,9 @@ export default function Footer() {
               <Link to={"/projects"} className="link link-hover">
                 Projects
               </Link>
-              <a
-                onClick={() => scrollToSection("contact")}
-                className="link link-hover"
-              >
+              <Link to={"/contact"} className="link link-hover">
                 Contact
-              </a>
+              </Link>
             </div>
 
             <div className="text-white flex flex-col justify-start items-start lg:items-center gap-5">
