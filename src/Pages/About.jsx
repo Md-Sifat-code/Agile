@@ -57,7 +57,7 @@ export default function About() {
             <div className="flex gap-4 flex-col justify-center items-center mt-6">
               <p className="text-white text-sm md:text-base">Projects</p>
               <h1 className="text-white text-4xl font-bold">
-                <CountUp end={5} duration={5} /> {/* Projects count */}
+                <CountUp end={6} duration={5} /> {/* Projects count */}
               </h1>
             </div>
             <div className="flex flex-col gap-4 justify-center items-center mt-6">

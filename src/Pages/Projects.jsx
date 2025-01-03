@@ -7,7 +7,7 @@ import project_2 from "/project-2.png";
 import project_3 from "/project-3.png";
 import project_4 from "/project-4.png";
 import project_5 from "/project-5.png";
-
+import project_6 from "/project-6.png";
 export default function Projects() {
   return (
     <section className="h-auto bg-[#08020e] mb-12 text-white overflow-hidden">
@@ -229,6 +229,40 @@ export default function Projects() {
                       <Link
                         to={"/"}
                         className="mt-6 inline-block text-white bg-yellow-500 px-6 py-2 rounded-md font-semibold hover:bg-yellow-600 transition-all"
+                      >
+                        Contact Us
+                      </Link>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              {/* Card 6 */}
+              <div className="bg-[#210633]  shadow-purple-800 shadow-2xl hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden mb-12">
+                <div className="flex flex-row items-center px-6 py-4">
+                  <h2 className="font-bold text-lg lg:text-2xl flex-1">
+                    Rinter<span className="text-green-500">IO</span>
+                  </h2>
+                </div>
+                <figure className="relative">
+                  <img
+                    src={project_6}
+                    alt="Project"
+                    className="w-full h-[250px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 text-center">
+                    <div className="text-white p-6">
+                      <h3 className="text-lg font-semibold">Timeline</h3>
+                      <p className="text-sm text-gray-400">5 months</p>
+                      <p className="text-sm text-gray-400 mt-2">
+                        Custom Web application Development for Rental Services
+                      </p>
+                      <p className="mt-4 text-sm">
+                        A rental platform helping users rent flats effortlessly
+                        for short periods.
+                      </p>
+                      <Link
+                        to={"/"}
+                        className="mt-6 inline-block text-white bg-green-500 px-6 py-2 rounded-md font-semibold hover:bg-green-600 transition-all"
                       >
                         Contact Us
                       </Link>
